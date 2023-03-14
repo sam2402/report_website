@@ -100,41 +100,40 @@
       </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
-      <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-                <h2>Table of Content</h2>
-              </div>
+    <!-- ======= Project Video Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="section-title">
+        <h2>Team 22 Video</h2>
+      </div>
+      <div class="container" style="padding: 50px;">
 
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> Algorithm Description</li>
-              <li><i class="bi bi-check2-circle"></i> SARIMA</li>
-              <li><i class="bi bi-check2-circle"></i> Prompt Generation</li>
-            </ul>
+        <div style="max-width: 1280px";>
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://liveuclac.sharepoint.com/sites/SysEng-Team22/_layouts/15/embed.aspx?UniqueId=ebfded4b-8611-48e1-9367-e917d5d9f1bd&embed=%7B%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="Front end video.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;">
+            </iframe>
+          </div>
+        </div>
+      </div>
 
-            <div class="section-title">
-                <h2>Algorithm Description</h2>
-              </div>
-            <p>
-                For the prediction of future carbon emissions data, we intend to use machine learning to construct a model that can learn from past data to predict future trends in carbon emissions. 
-                The initial idea was to use the linear regression, but we soon realized that carbon emissions do not change monotonically we would expect, instead, the magnitude of its changes varies considerably over time, demonstrates that the use of linear fitting alone cannot give a reasonable prediction.                
-            </p>
-            <p>
-                After that, we started looking at different neural networks, tried to find one that would meet our requirement, and Recurrent Neural Network (hereinafter called the RNN) were therefore our next target. Compared to the previous algorithm, its activation function is non-linear, and the fact that RNN can feed the previous output back into the network as the next input would allow it to give relatively reliable predictions based on past data. However, during initial testing of the constructed RNN model, we found that two datasets with large difference in time span (2 years/5 years) produced similar predictive trends. This is because the gradients will become very small as the information is passed through the network, so after a long period of data process, our network is unable to retain information from earlier time steps. In this case, we reconsidered the availability of the RNN in our project. Fortunately, there is an optimized version of RNN, called Long short-term memory, by introducing gating mechanisms and memory units that allow the network to selectively update or forget previous data, we solved the problem of disappearing gradients in RNN. 
-            </p>
-            <p>
-                For data pre-processing, we originally envisaged using the k-means clustering algorithm to remove abnormal data from the dataset and to classify the dataset. While in subsequent coding sessions, we discarded this algorithm, mainly because this algorithm requires manual pre-setting of parameters, which is inefficient. For data cleaning, we used APIs from pandas in python to remove outliers and fill in missing values easily. On the other hand, since the data from our client has already been broken down according to its source, we do not need to repeat this step.
-            </p>
+      <div class="container" style="padding: 50px;">
+        <div style="max-width: 1280px">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://liveuclac.sharepoint.com/sites/SysEng-Team22/_layouts/15/embed.aspx?UniqueId=5575ea3b-14f8-42b8-bb01-4b78aef1ca62&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="algorithms blog video.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;">
+            </iframe>
+          </div>
+        </div>
+      </div>
 
+      <div class="container" style="padding: 50px;">
+        <div style="max-width: 1280px">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://liveuclac.sharepoint.com/sites/SysEng-Team22/_layouts/15/embed.aspx?UniqueId=b4028b9f-8c70-428b-b705-79711ebc5319&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="Update video.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;">
+            </iframe>
           </div>
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End Project Section -->
 
 
 

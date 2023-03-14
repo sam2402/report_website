@@ -111,30 +111,256 @@
               </div>
 
             <ul>
-              <li><i class="bi bi-check2-circle"></i> Algorithm Description</li>
+              <li><i class="bi bi-check2-circle"></i> Description of the Algorithm</li>
               <li><i class="bi bi-check2-circle"></i> SARIMA</li>
               <li><i class="bi bi-check2-circle"></i> Prompt Generation</li>
+              <li><i class="bi bi-check2-circle"></i> Conclusion</li>
+              <li><i class="bi bi-check2-circle"></i> References</li>
             </ul>
-
-            <div class="section-title">
-                <h2>Algorithm Description</h2>
-              </div>
-            <p>
-                For the prediction of future carbon emissions data, we intend to use machine learning to construct a model that can learn from past data to predict future trends in carbon emissions. 
-                The initial idea was to use the linear regression, but we soon realized that carbon emissions do not change monotonically we would expect, instead, the magnitude of its changes varies considerably over time, demonstrates that the use of linear fitting alone cannot give a reasonable prediction.                
-            </p>
-            <p>
-                After that, we started looking at different neural networks, tried to find one that would meet our requirement, and Recurrent Neural Network (hereinafter called the RNN) were therefore our next target. Compared to the previous algorithm, its activation function is non-linear, and the fact that RNN can feed the previous output back into the network as the next input would allow it to give relatively reliable predictions based on past data. However, during initial testing of the constructed RNN model, we found that two datasets with large difference in time span (2 years/5 years) produced similar predictive trends. This is because the gradients will become very small as the information is passed through the network, so after a long period of data process, our network is unable to retain information from earlier time steps. In this case, we reconsidered the availability of the RNN in our project. Fortunately, there is an optimized version of RNN, called Long short-term memory, by introducing gating mechanisms and memory units that allow the network to selectively update or forget previous data, we solved the problem of disappearing gradients in RNN. 
-            </p>
-            <p>
-                For data pre-processing, we originally envisaged using the k-means clustering algorithm to remove abnormal data from the dataset and to classify the dataset. While in subsequent coding sessions, we discarded this algorithm, mainly because this algorithm requires manual pre-setting of parameters, which is inefficient. For data cleaning, we used APIs from pandas in python to remove outliers and fill in missing values easily. On the other hand, since the data from our client has already been broken down according to its source, we do not need to repeat this step.
-            </p>
 
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+              <h2>Description of the Algorithm</h2>
+            </div>
+            
+            <p>In this project we tried many different approaches to ML (Machine Learning Models) to achieve our goal. In our project we have used algorithms in two parts.</p> 
+        
+            <p>The first part is the prediction of future carbon emission data. The second part is the generation of future recommendations (on how to reduce carbon emissions).</p> 
+        
+            <p>For the first part, we used the SARIMA (Seasonal Autoregressive Integrated Moving Average) model, which is an extension of the ARIMA (Autoregressive Integrated Moving Average) model. In this part of our project is about forecasting the future carbon emission of data Volvo sever, which have significant time correlation and some seasonal patterns, so using time series analysis is quite suitable for this case. The SARIMA model can predict future data by analyzing trends and cyclical patterns in the data and incorporating forecasting techniques. This model can capture seasonal patterns in the data to better predict future changes in the data.</p> 
+        
+            <p>For the second part, we choose to write a program to generate a set of rules for conditions to create the prompt that we can pass to OpenAI API to ask advice about how to reduce the carbon emission for certain server in certain location.</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+              <h2>SARIMA</h2>
+            </div>
+          <p>Before introducing this model, I would like to say introduce what is time series analysis and the two characteristics that will be present in our model: Stationarity and Seasonality.</p>
+
+
+          <h4 class="text-left">Time Series Analysis</h4>
+
+          <p>Time series analysis is a technique used to analyze data collected over a predetermined period of time, as opposed to data that was acquired randomly or irregularly. This type of analysis is unique in that it enables researchers to examine how variables change over time, offering insightful information about the evolution of the data points and resulting outcomes. Accuracy and consistency are crucial in time series analysis, and it is particularly effective when there is a large amount of data available. Additionally, time series analysis is a helpful tool for planning and decision-making, as it can be used to predict future trends using historical data. [1] </p>
+
+          <h4 class="text-left">Stationarity</h4>
+
+          <p>Stationarity refers to the consistency of statistical properties in a time series over time, meaning that the shape of the series will persist in the future and its mean and variance will not significantly change. A stationary time series is a crucial requirement for predictive analysis as non-stationary time series tend to be unpredictable.</p>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/Stationarity.png"></p></div>
+
+          <h4 class="text-left">Seasonality</h4>
+
+          <p>
+            Seasonality refers to the recurring pattern in a time series that occurs over a particular season. For instance, the impact of Thanksgiving Day on turkey sales can be considered as a form of seasonality. In the context of SARIMA, seasonality refers to the repeated variation in data over a fixed time frame, such as a specific season of the year. SARIMA models are more effective in predicting time series data as they take into account this seasonal pattern.</p>
+
+          <p>As I mentioned earlier, the SARIMA model is an extension of the ARIMA model that incorporates seasonality. On the other hand, the ARIMA model is used for non-seasonal time series data and consists of three components: autoregressive (AR), difference (I), and moving average (MA). The ARIMA model utilizes first-order or second-order differences of the data to minimize or remove the trend and seasonality of the time series, resulting in a stationary data series.</p>
+
+          <p>The SARIMA model has several parameters that need to be specified in order to build a model that fits the data well. These parameters are:</p>
+
+          <ul>
+            <li>Ex. model = SARIMAX(train_data, order=(2, 1, 2), seasonal_order=(1, 1, 1, 12))</li>
+            <li>p: The order of the autoregression component. It is the number of lagged values used in the autoregressive model.</li>
+            <li>d: The order of the integration component. It is the number of times the data needs to be differenced in order to make it stationary.</li>
+            <li>q: The order of the moving average component. It is the number of lagged forecast errors used in the moving average model.</li>
+            <li>P: The order of the seasonal autoregression component. It is the number of lagged values used in the seasonal autoregressive model.</li>
+            <li>D: The order of the seasonal integration component. It is the number of times the seasonal data needs to be differenced in order to make it stationary.</li>
+            <li>Q: The order of the seasonal moving average component. It is the number of lagged forecast errors used in the seasonal moving average model.</li>
+            <li>m: The number of time steps in each season.
+          </ul>
+
+          <p>The role of the seasonal and m parameters P, D, Q is to improve the predictive accuracy of the model by taking into account the seasonal correlation in the time series. In the SARIMA model, these seasonal and m parameters serve the same purpose as the three parameters of the ARIMA model (p, d, q), but only for seasonal data.</p>
+
+          <h4 class="text-left">Order of Differencing in a SARIMA model</h4>
+
+
+          <ul>
+            <li>Differencing: used to calculate the difference of time series data between time nodes t1 and t.</li>
+            <li>First-order differencing addresses linear trends, it’s basically calculated the transformation di = ti – ti-1.</li>
+            <li>Second-order differencing addresses quadratic trends, in other words it’s calculating the difference of First-Order difference. It’s basically calculated the transformation of di = (ti – ti-1.) – (ti-1 – ti-2.), which is equivalent to the formula di = ti – 2ti-1 + ti-2. [2] </li>
+            <li>Differencing can be used to pre-process time series data to satisfy the requirement of stationarity, which can then be analyzed and predicted using the analysis of stationary time series.</li> 
+          </ul>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/Order of Differencing in a SARIMA model.png"></p></div>
+
+          <h4 class="text-left">Autoregressive (AR) Model</h4>
+
+          <p>Autoregression (AR) is a time series model that assumes that the current time series values are a combination of previous time series values; in other words, it describes the relationship between current and historical values using the variable's own historical time data for forecasting. </p>
+
+          <p>
+            Specifically, the AR(p) model can be expressed as the following equation:</p>
+
+          <p>X(t) = c + φ1 * X(t-1) + φ2 * X(t-2) + … + φp * X(t-p) + ε(t)
+
+          </p>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/AutoRegressiveModel.png"></p></div> <p>[3]</p>
+
+          <p> P here indicates a time span interval, e.g. 1 for today and yesterday, 2 for today and the day before. i indicates how many days of data are related to the previous days. </p>
+          <p>And c is a constant term, φ1, φ2, ..., φp are the coefficients of the AR model, X(t) is the current time series value, X(t-1), X(t-2), ..., X(t-p) are the past p time series values, and ε(t) is the error term, which is the random noise that cannot be explained by the model. </p>
+
+          <h4 class="text-left">Moving average (MA) Model</h4>
+            
+            <p>Moving Average (MA) Model is a time series forecasting model. The model is based on the moving average in the time series (the values over successive time periods are summed separately and divided by the number of this value to obtain an average value) and aims to predict the value of the next time step.</p>
+            <p>The MA model assumes that the errors in the series (i.e., the difference between the observed and true values) are white noise and attempts to capture the effect of the moving average of these errors, simply by focusing on the accumulation of large error values in the AR model. The moving average method is effective in eliminating the random fluctuations in the forecasts. In the MA model, the predicted value is obtained by the value of the moving average prediction error (i.e., white noise).</p>
+            <p>Specifically, the MA (q) model can be expressed as the following equation:</p>
+
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/MAModel.png"></p></div> <p>[4]</p>
+
+          <p>yt is a data point on the time series. μ is a constant term of the model, representing the mean of the series. εt is a random error term, representing the error. θ is a coefficient indicating the degree of influence of the previous error on the current error. </p>
+
+          <p>Above we have described how this model is composed. Below we will describe a few functions on how to choose specific values of p and q.</p>
+
+          <h4 class="text-left">Autocorrelation Function (ACF)</h4>
+
+          <p>Before we talk about the ACF function, let's talk about the correlation function. If the two variables change to the same extent, the correlation coefficient there is +1, if the opposite then the correlation coefficient is -1, if it is 0 means there is no correlation between the two, which is a measure of the indicator.</p>
+
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/ACF.png"></p></div>
+
+          <p>Autocorrelation Function (ACF) function is a statistic used to describe the autocorrelation of a time series, it is not a measure of two different de variables but it can be used to measure the correlation between two data points in the time series, that is, to calculate the correlation between yt and yt-1/y-2/…/yt-n. The value of the ACF function ranges from -1 to 1. Similar to the correlation function, when the value of the ACF function is positive, it means that there is a positive correlation between the data points, when the value of the ACF function is negative, it means that there is a negative correlation between the data points, when the value of the ACF function is 0, it also means that there is no correlation between the data points.</p>
+
+          <p>The ACF equation is like this:</p>
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/ACFEquation.png"></p></div>
+
+          <p>We will then draw a line graph of the ACF values with a 95% confidence interval and choose the q-value for the SARIMA model based on the relationship of the points falling into the confidence interval. </p>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/ACFLine.png"></p></div>
+
+          <h4 class="text-left">Partial Autocorrelation Function (PACF)</h4>
+
+          <p>For a stationary AR(p) model, the lagged k autocorrelation coefficient p(k) is actually not a simple correlation between y(t) and y(t-k). y(t) is also affected by k-1 variables y(t-1), y(t-2) ... in the process of ACF calculation. and these k-1 variables are all correlated with y(t-k), so the autocorrelation coefficient p(k) is mixed with the influence of other variables on y(t) and y(t-k). But PACF will eliminate the interference of these k-1 random variables in the middle and directly calculate the effect of y(t-k) on y(t) (strictly the correlation between these two variables).</p>
+          <p>The ACF equation is like this:</p>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/PACFEq.png"></p></div><p>[5]</p>
+
+          <p>We will then draw a line graph of the PACF values with a 95% confidence interval and choose the p-value for the SARIMA model based on the relationship of the points falling into the confidence interval. </p>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/PACFLine.png"></p></div>
+
+          <h4 class="text-left">Bayesian Information Criterion (BIC)</h4>
+
+          <p>The two previously mentioned functions can help us to choose the values of p and q separately, but there may be more than one suitable value of p and q at the same time, and there is another function that can help us to choose the optimal p and q values.</p>
+          <p>The Bayesian Information Criterion (BIC) function is used to compare different models in statistical model selection. BIC is based on maximum likelihood estimation and takes into account the complexity of the model by applying a penalty term to the model.</p>
+          <p>For an ARIMA(p,d,q) model, the BIC is calculated as follows:</p>
+
+          <p>BIC = log(n) * (p + q + 1) - 2 * log(L)</p>
+
+          <p>Where n is the sample size of the time series data, p is the order of the AR model, q is the order of the MA model, and L is the maximum likelihood value of the model.</p>
+          <p>A smaller value of BIC indicates a better fit of the model. Therefore, when choosing the parameters p and q of the ARIMA model, the model with the smallest BIC value is usually chosen as the final model.</p>
+          <p>We can then draw a visual heat map based on the BIC values as follows.</p>
+
+
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/BIC.png"></p></div>
+
+          <h4 class="text-left">Residual Test</h4>
+
+          <p>We choose to use the residual test to test our model and it will check the suitability of the model built. The residuals are the differences between the actual observations and the model predictions.</p>
+          <p>The residuals are observed to be normally distributed with a mean of 0 and a variance of 0.</p>
+          <p>Examples of graphs are drawn:</p>
+
+          <div style="overflow:hidden;"><p><img src="assets/img/algorithms/Residual.jpg"></p></div>
+
+          <h4 class="text-left">Training and testing sets</h4>
+
+          <p> We read the data in dictionary format and convert it to Pandas DataFrame format, and then split the dataset into a training set containing the most recent 90 days of data and a test set containing all the data except the training set.</p>
+          <p>The splitting of the training and test sets is based on time series. In time series forecasting, the training set should contain the most recent period because we want to predict future trends based on the most recent data. The test set should contain the rest of the data excluded from the training set to test the accuracy of the model on future data.</p>
+          <p>The specific implementation assigns the most recent 90 days of data to the training set by using a slicing operation on the DataFrame, and assigns all data except for these 90 days of data to the test set. The iloc method of DataFrame is used here to fetch the data of the penultimate 90 days with negative index.</p>
+          <p>train_data = df[-90:]</p>
+          <p>test_data = df[:-90]</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+              <h2>Prompt Generation</h2>
+            </div>
+            
+            <p>First, we define some default parameters, such as a list of server hardware configurations, a list of energy types, and a list of cooling types. We extract data such as carbon emission on the last day, server location, energy type, server utilization, server working time, cooling type and server configuration. Next, through a series of conditional judgments and calculations, the predicted future carbon emissions are calculated, and based on this, recommendations are given, such as which cleaner energy source to use, what percentage to increase server usage, how many hours to reduce server working hours, which more energy-efficient hardware configuration to replace and consider relocating servers to higher altitude areas. Finally, the results of the recommendations are output to a JSON file called prompt.json, and the prompt is then passed to OpenAI to ask for more detailed recommendations.</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+     <!-- ======= About Section ======= -->
+     <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+              <h2>Conclusion</h2>
+            </div>
+            
+            <p>After we tried the SARIMA model, we found that indeed this model is very suitable for our project to be able to generate suitable future data forecasts, especially when we do not have much information about the data obtained, only two data, time and numerical. Secondly, regarding the comparison between the parameters of p and q that we tried to find with the combination of ACF and PACF respectively and the parameters of p and q using the BIC function, by substituting the parameters into the model, we found that the model calculated by the BIC function seems to be a little more suitable in terms of selection. In fact, if it is said that the dataset can have more information (information that has real meaning and impact on carbon emissions) rather than just time, we think it would be more appropriate to use a machine learning model similar to the LSTM model. As well as regarding the generation of carbon emission reduction recommendations, if a larger dataset would also allow us to use machine learning models to generate recommendations instead of the existing methods.</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+                <h2>References</h2>
+              </div>
+
+            <ul>
+              <li>1.	Tableau.com, “Time Series Analysis: Definition, Types, Techniques, and When It's Used” [Online] Available at: <a href="http://www.tableau.com/learn/articles/time-series-analysis">http://www.tableau.com/learn/articles/time-series-analysis</a></li>
+              <li>2.	Real-Statics.com, “ARIMA Differencing “[Online] Available at:<a href="https://real-statistics.com/time-series-analysis/arima-processes/arima-differencing/">https://real-statistics.com/time-series-analysis/arima-processes/arima-differencing/</a></li>
+              <li>3.	En.wikipedia.org,(2023) [Online] Available at: <a href="https://en.wikipedia.org/wiki/Autoregressive_model">https://en.wikipedia.org/wiki/Autoregressive_model</a></li>
+              <li>4.	En.wikipedia.org,(2023) [Online] Available at:  <a href="https://en.wikipedia.org/wiki/Moving-average_model">https://en.wikipedia.org/wiki/Moving-average_model</a></li>
+              <li>5.	Timeseriesoning.com, “Understanding Partial Auto-correlation And The PACF” [Online] Available at: <a href="https://timeseriesreasoning.com/contents/partial-auto-correlation/">https://timeseriesreasoning.com/contents/partial-auto-correlation/</a></li>
+            </ul>
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    
 
 
 
