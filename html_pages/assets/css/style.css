@@ -960,6 +960,7 @@ section {
 
 .about ul li {
   padding-bottom: 10px;
+  list-style: none;
 }
 
 .about ul i {
