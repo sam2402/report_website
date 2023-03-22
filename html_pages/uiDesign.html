@@ -111,16 +111,26 @@
             <div class="section-title">
                 <h2>Table of Content</h2>
               </div>
-
             <ul>
-              <li><i class="bi bi-check2-circle"></i> Algorithm Description</li>
-              <li><i class="bi bi-check2-circle"></i> SARIMA</li>
-              <li><i class="bi bi-check2-circle"></i> Prompt Generation</li>
+              <li><i class="bi bi-check2-circle"></i> Design Principles</li>
+              <li><i class="bi bi-check2-circle"></i> Hand-drawn sketches</li>
+              <li><i class="bi bi-check2-circle"></i> Online interactive wireframe</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
 
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
             <div class="section-title">
-                <h2>Algorithm Description</h2>
+                <h2>Design Principles</h2>
               </div>
+
             <p>
                 For the prediction of future carbon emissions data, we intend to use machine learning to construct a model that can learn from past data to predict future trends in carbon emissions. 
                 The initial idea was to use the linear regression, but we soon realized that carbon emissions do not change monotonically we would expect, instead, the magnitude of its changes varies considerably over time, demonstrates that the use of linear fitting alone cannot give a reasonable prediction.                
@@ -137,6 +147,62 @@
 
       </div>
     </section><!-- End About Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+                <h2>Hand-drawn sketches</h2>
+              </div>
+
+            <p>
+                For the prediction of future carbon emissions data, we intend to use machine learning to construct a model that can learn from past data to predict future trends in carbon emissions. 
+                The initial idea was to use the linear regression, but we soon realized that carbon emissions do not change monotonically we would expect, instead, the magnitude of its changes varies considerably over time, demonstrates that the use of linear fitting alone cannot give a reasonable prediction.                
+            </p>
+            <p>
+                After that, we started looking at different neural networks, tried to find one that would meet our requirement, and Recurrent Neural Network (hereinafter called the RNN) were therefore our next target. Compared to the previous algorithm, its activation function is non-linear, and the fact that RNN can feed the previous output back into the network as the next input would allow it to give relatively reliable predictions based on past data. However, during initial testing of the constructed RNN model, we found that two datasets with large difference in time span (2 years/5 years) produced similar predictive trends. This is because the gradients will become very small as the information is passed through the network, so after a long period of data process, our network is unable to retain information from earlier time steps. In this case, we reconsidered the availability of the RNN in our project. Fortunately, there is an optimized version of RNN, called Long short-term memory, by introducing gating mechanisms and memory units that allow the network to selectively update or forget previous data, we solved the problem of disappearing gradients in RNN. 
+            </p>
+            <p>
+                For data pre-processing, we originally envisaged using the k-means clustering algorithm to remove abnormal data from the dataset and to classify the dataset. While in subsequent coding sessions, we discarded this algorithm, mainly because this algorithm requires manual pre-setting of parameters, which is inefficient. For data cleaning, we used APIs from pandas in python to remove outliers and fill in missing values easily. On the other hand, since the data from our client has already been broken down according to its source, we do not need to repeat this step.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        
+        <div class="row">
+          <div class="">
+            <div class="section-title">
+                <h2>Online interactive wireframe</h2>
+              </div>
+
+            <p>
+                For the prediction of future carbon emissions data, we intend to use machine learning to construct a model that can learn from past data to predict future trends in carbon emissions. 
+                The initial idea was to use the linear regression, but we soon realized that carbon emissions do not change monotonically we would expect, instead, the magnitude of its changes varies considerably over time, demonstrates that the use of linear fitting alone cannot give a reasonable prediction.                
+            </p>
+            <p>
+                After that, we started looking at different neural networks, tried to find one that would meet our requirement, and Recurrent Neural Network (hereinafter called the RNN) were therefore our next target. Compared to the previous algorithm, its activation function is non-linear, and the fact that RNN can feed the previous output back into the network as the next input would allow it to give relatively reliable predictions based on past data. However, during initial testing of the constructed RNN model, we found that two datasets with large difference in time span (2 years/5 years) produced similar predictive trends. This is because the gradients will become very small as the information is passed through the network, so after a long period of data process, our network is unable to retain information from earlier time steps. In this case, we reconsidered the availability of the RNN in our project. Fortunately, there is an optimized version of RNN, called Long short-term memory, by introducing gating mechanisms and memory units that allow the network to selectively update or forget previous data, we solved the problem of disappearing gradients in RNN. 
+            </p>
+            <p>
+                For data pre-processing, we originally envisaged using the k-means clustering algorithm to remove abnormal data from the dataset and to classify the dataset. While in subsequent coding sessions, we discarded this algorithm, mainly because this algorithm requires manual pre-setting of parameters, which is inefficient. For data cleaning, we used APIs from pandas in python to remove outliers and fill in missing values easily. On the other hand, since the data from our client has already been broken down according to its source, we do not need to repeat this step.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
 
 
 
