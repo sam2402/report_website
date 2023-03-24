@@ -219,7 +219,7 @@
               to build a model that fits the data well. These parameters are:
           </p>
           <p>
-              Ex. model = SARIMAX(train_data, order= (1, 2, 1), seasonal_order=(4, 2, 3,
+              Ex. model = SARIMAX(<code>train_data</code>, order= (1, 2, 1), <code>seasonal_order</code>=(4, 2, 3,
               7))
           </p>
           <p>
@@ -478,14 +478,14 @@
               hours with negative index.
           </p>
           <p>
-              train_data = df[-360:]: This line of code takes the last 360 data points in
+              <code>train_data</code> = df[-360:]: This line of code takes the last 360 data points in
               the dataset and uses them as the training set.’ -360:’ means the
               penultimate 360 data points and: means all data points from that data point
               to the end of the dataset. So, df[-360:] represents the subset containing
               the last 360 data points.
           </p>
           <p>
-              test_data = df[:-360]: this line of code takes all but the last 360 data
+              <code>test_data</code> = df[:-360]: this line of code takes all but the last 360 data
               points in the dataset as the test set. ‘:-360’ means all data points from
               the beginning of the data set to the penultimate 360 data points before.
               So, df[:-360] represents a subset of the data set except for the last 360
@@ -515,10 +515,10 @@
           <p>
               Predicted values: These are the data points that the model predicts based
               on the training data. In our project, the predicted values are generated
-              from the trained SARIMA model. When we fit the model using model_fit =
-              model.fit(), the model learns the underlying structure and characteristics
+              from the trained SARIMA model. When we fit the model using <code>model_fit =
+              model.fit()</code>, the model learns the underlying structure and characteristics
               of the emissions based on the training data. Future emissions can then be
-              predicted using model_fit.forecast(steps=step).
+              predicted using <code>model_fit.forecast(steps=step)</code>.
           </p>
           <p>
               These two predicted values are used to assess the performance of the model
@@ -610,8 +610,8 @@
               process of prompt generation is divided into the following steps.
           </p>
           <p>
-              Our code defines a function called get_prompt that takes two arguments: a
-              list called resource_emission_infos that contains an object of type
+              Our code defines a function called <code>get_prompt</code> that takes two arguments: a
+              list called <code>resource_emission_infos</code> that contains an object of type
               ResourceEmissionInfo, a class called ResourceEmissionInfo. The structure of
               this class contains the following properties:
           </p>
@@ -620,11 +620,11 @@
               resource, such as a server.
           </p>
           <p>
-              past_weeks_emissions: integer of type past_weeks_emissions, representing
+            <code>past_weeks_emissions</code>: integer of type <code>past_weeks_emissions</code>, representing
               the carbon emissions of the past week.
           </p>
           <p>
-              power_consumption_breakdown: dictionary type, representing the distribution
+            <code>power_consumption_breakdown</code>: dictionary type, representing the distribution
               of power consumption in different regions. This is fetched from the
               external Electricity Maps API. The values returned from this API are in
               grams of CO2(eq) per KWh per power emissions type (for example, oil
@@ -633,11 +633,11 @@
               they contribute to overall emissions. E.g.: oil: 31%.
           </p>
           <p>
-              fossil_free_percentage: integer type indicating the percentage of fossil
+            <code>fossil_free_percentage</code>: integer type indicating the percentage of fossil
               fuel-free energy use.
           </p>
           <p>
-              renewable_percentage: integer type indicating the percentage of renewable
+              <code>renewable_percentage</code>: integer type indicating the percentage of renewable
               energy used.
           </p>
           <p>
@@ -646,36 +646,36 @@
               its power consumption distribution. This information can be used to analyze
               the environmental impact of the resource, as well as to provide
               recommendations for the resource based on different recommendation types.
-              In the get_prompt function, a list containing ResourceEmissionInfo objects
+              In the <code>get_prompt</code> function, a list containing ResourceEmissionInfo objects
               is used as input, and then an advice request is generated for those
               resources.
           </p>
           <p>
-              and an instance of the AdviceType enumeration type named advice_type. The
+              and an instance of the AdviceType enumeration type named <code>advice_type</code>. The
               purpose of this function is to generate a string containing an advice
               request based on the given resource emission information and advice type.
           </p>
           <p>
               First, the function defines a string named intro to indicate the beginning
-              of the output string. Next, an empty list named server_info_prompts are
+              of the output string. Next, an empty list named <code>server_info_prompts</code> are
               created to store information about each server.
           </p>
           <p>
-              Next, a for loop is used to iterate over each resource_emission_info object
-              in the resource_emission_infos list. In the loop, the relevant information
-              is first extracted from the resource_emission_info object, such as the
+              Next, a for loop is used to iterate over each <code>resource_emission_info</code> object
+              in the <code>resource_emission_infos</code> list. In the loop, the relevant information
+              is first extracted from the <code>resource_emission_info</code> object, such as the
               resource name, current carbon emissions, and power consumption
               distribution. Then, an advice request is constructed for that server based
-              on the value of advice_type.
+              on the value of <code>advice_type</code>.
           </p>
           <p>
-              At the end of the loop, a string named request_advice_prompt is defined for
-              requesting specific advice based on the value of advice_type. Finally,
-              intro, server_info_prompts and request_advice_prompt is concatenated
+              At the end of the loop, a string named <code>request_advice_prompt</code> is defined for
+              requesting specific advice based on the value of <code>advice_type</code>. Finally,
+              intro, <code>server_info_prompts</code> and <code>request_advice_prompt</code> is concatenated
               together and used as the return value of the function.
           </p>
           <p>
-              In this function, depending on the value of advice_type, the generated
+              In this function, depending on the value of <code>advice_type</code>, the generated
               advice requests may involve changing the energy type, changing the server
               location, changing the resource configuration or changing the cooling type.
               This makes our function highly reusable in different scenarios.
