@@ -622,9 +622,10 @@
                   </ol>
               </li>
           </ul>
+          
           <div class="row">
             <div style="padding: 30px;">
-              <img src="assets/img/Implementation Images/14.png" class="img-fluid" alt="">
+              <img src="assets/img/Implementation Images/15.png" class="img-fluid" alt="">
             </div>
             </div>
 
@@ -638,9 +639,11 @@
                   <li style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Power consumption breakdown, fossil free percentage and renewable percentage attributes are all retrieved by making a <a href="https://api.electricitymap.org/v3/power-breakdown/past">https://api.electricitymap.org/v3/power-breakdown/past</a> request to Electricity Mapper at the relevant longitude, latitude and time for the resource. The result of this request has the following structure:</li>
               </ul>
           </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+          <div class="row">
+            <div style="padding: 30px;">
+              <img src="assets/img/Implementation Images/16.png" class="img-fluid" alt="">
+            </div>
+            </div>
           <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'><br></p>
           <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The fossilFreePercentage and renewablePercentage attributes are taken as is. The powerConsumptionBreakdown attribute is changed so each value is a percentage between 0 and 100 instead of a number of grams of CO2.</p>
           <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
@@ -649,6 +652,12 @@
                   <li style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>This list of ResourceEmissionsInfo object is passed to the get_advice method of the OpenAIClient singleton instance.</li>
               </ul>
           </div>
+
+          <div class="row">
+            <div style="padding: 30px;">
+              <img src="assets/img/Algorithm Implementation Images/17.png" class="img-fluid" alt="">
+            </div>
+            </div>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
@@ -659,6 +668,17 @@
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">I&apos;ll talk more about the format of the get_prompt method generation below.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+          <div class="row">
+            <div style="padding: 30px;">
+              <img src="assets/img/Algorithm Implementation Images/18.png" class="img-fluid" alt="">
+            </div>
+            </div>
+            <div class="row">
+            <div style="padding: 30px;">
+              <img src="assets/img/Algorithm Implementation Images/19.png" class="img-fluid" alt="">
+            </div>
+            </div>
+
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We define this get_prompt Python function, which takes two parameters: a list of ResourceEmissionInfo objects and an AdviceType enumeration value. The goal of the function is to generate a prompt string containing detailed server information and a specific advice request, based on the input server information and advice type.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
           <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
