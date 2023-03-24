@@ -283,97 +283,43 @@
 
         <div class="row">
           <div style="padding: 30px;">
+<ol>
+<li><p>Clone this repository</p>
+</li>
+<li><p>Follow the instructions here to install the Azure CLI</p>
+<p><a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">How to install the Azure CLI</a></p>
+</li>
+<li><p>Once this is installed, open your command line and enter</p>
+<p><code>az login</code> </p>
+<p>Following the instructions to login to your Microsoft account.</p>
+<p>If you are Adamos Hadjivasiliou, Yun Fu or Dean Mohamedally, you should have been given access to our system by our client Avanade. If you encounter errors when logging in or when running our dashboard please contact me at <a href="mailto:sam.lavadera.20@ucl.ac.uk">sam.lavadera.20@ucl.ac.uk</a>.</p>
+</li>
+<li><p>Go to the directory <code>carbon-dashboard</code> you created by cloning this repository. Start the server by running the following commands:</p>
+<pre><code><span class="hljs-keyword">cd</span> backend
+./server.<span class="hljs-keyword">sh</span>
+</code></pre></li>
+<li><p>After a few seconds the following will appear in your command line:</p>
+<p><code>Running on http://127.0.0.1:5000</code></p>
+<p>Go to <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a> in your browser</p>
+</li>
+<li><p>Go back to your terminal in which you started the server. Wait until you see &quot;SERVER READY!&quot; in your terminal. <strong>This will take several minutes.</strong></p>
+</li>
+<li><p>Keeping the server running, open a new terminal window in the <code>carbon-dashboard</code> directory.</p>
+</li>
+<li><p>Run the following</p>
+<pre><code>cd frontend
+<span class="hljs-built_in">npm</span> install
+<span class="hljs-built_in">npm</span> start
+</code></pre></li>
+<li><p>Open <a href="http://localhost:3000">http://localhost:3000</a> in your browser.</p>
+</li>
+<li><p>You will now see the carbon dashboard! Some graphs and figures may take up to a minute to load especially the first time you open a page. After this it will speed up as we have implemented a cache on the backend for common requests.</p>
+</li>
+</ol>
 
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>This deployment manual will guide you through the setup and launch process of our dashboard. Let us get started.&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><br></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><br></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><br></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><strong><span style='font-size:27px;font-family:"Georgia",serif;'>Operation</span></strong></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;line-height:107%;'><strong><span style='font-size:21px;line-height:107%;font-family:"Georgia",serif;'>&nbsp;</span></strong></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ol style="margin-bottom:0cm;list-style-type: decimal;margin-left:12.899999999999999px;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><strong><span style='line-height:107%;font-family:"Georgia",serif;color:black;font-size:21px;color:black;'>Frontend Setup</span></strong></li>
-    </ol>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ul style="margin-bottom:0cm;list-style-type: undefined;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-family:"Georgia",serif;font-size:19px;'>Install Node.js</span></li>
-    </ul>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>Before you start the frontend, make sure you have Node.js installed on your computer. You can download and install it from the official website:&nbsp;</span><a href="https://nodejs.org/en/"><span style="text-decoration:underline;"><span style='font-size:19px;font-family:"Georgia",serif;color:black;'>https://nodejs.org/en/</span></span></a><span style='font-size:19px;font-family:"Georgia",serif;'>.&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>&nbsp;</p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ul style="margin-bottom:0cm;list-style-type: undefined;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-family:"Georgia",serif;font-size:19px;'>Download dashboard</span></li>
-    </ul>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>Once Node.js is prepared, you can download the dashboard from GitHub Repository (https://github.com/sam2402/carbon-dashboard/).&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>&nbsp;</p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ul style="margin-bottom:0cm;list-style-type: undefined;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-family:"Georgia",serif;font-size:19px;'>Install additional dependencies&nbsp;</span></li>
-    </ul>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>Our Carbon Dashboard requires additional dependencies to work properly. To install them, navigate to the root directory of the dashboard and enter the frontend folder (i.e., carbon-dashboard/frontend), and run the command:</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; npm install</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ol style="margin-bottom:0cm;list-style-type: undefined;margin-left:12.899999999999999px;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><strong><span style='line-height:107%;font-family:"Georgia",serif;color:black;font-size:21px;color:black;'>Backend Setup</span></strong></li>
-    </ol>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ul style="margin-bottom:0cm;list-style-type: undefined;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-family:"Georgia",serif;font-size:19px;'>Install Azure Command Line</span></li>
-    </ul>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>Before you start the backend, make sure you have the Azure Command Line installed on your computer. You can download and install it from the official website:&nbsp;</span><a href="https://nodejs.org/en/"><span style="text-decoration:underline;"><span style='font-size:19px;font-family:"Georgia",serif;color:black;'>https://nodejs.org/en/</span></span></a><span style='font-size:19px;font-family:"Georgia",serif;'>.&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>&nbsp;</p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ul style="margin-bottom:0cm;list-style-type: undefined;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-family:"Georgia",serif;font-size:19px;'>Download dashboard</span></li>
-    </ul>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>Once Node.js is prepared, you can download the dashboard from GitHub Repository (https://github.com/sam2402/carbon-dashboard/).</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ol style="margin-bottom:0cm;list-style-type: undefined;margin-left:12.899999999999999px;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><strong><span style='font-family:"Georgia",serif;font-size:21px;'>Launch Dashboard</span></strong></li>
-    </ol>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>Once you have done the setup process, our dashboard should be ready to launch. Under the frontend folder, run:</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; npm start</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<div style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'>
-    <ol style="margin-bottom:0cm;list-style-type: undefined;margin-left:12.899999999999999px;">
-        <li style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><strong><span style='font-family:"Georgia",serif;font-size:21px;'>Stop Dashboard</span></strong></li>
-    </ol>
-</div>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>&nbsp;</span></p>
-<p style='margin:0cm;font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;border:none;'><span style='font-size:19px;font-family:"Georgia",serif;'>To terminate the dashboard, in the command prompt, type CTRL + C.&nbsp;</span></p>
+
           </div>
-          </div>
+        </div>
 
           
       </div>
