@@ -115,15 +115,72 @@
                 <h2>Design Principles</h2>
               </div>
 
-            <p>
-                For the prediction of future carbon emissions data, we intend to use machine learning to construct a model that can learn from past data to predict future trends in carbon emissions. 
-                The initial idea was to use the linear regression, but we soon realized that carbon emissions do not change monotonically we would expect, instead, the magnitude of its changes varies considerably over time, demonstrates that the use of linear fitting alone cannot give a reasonable prediction.                
+              <p>
+                1. User-Centered Design: User-centered design (UCD) is an approach to
+                design that prioritizes the needs and goals of the end-users. UCD involves
+                understanding the user's context, tasks, and goals, and designing the
+                dashboard around them. For example, if the primary user of the dashboard is
+                a fleet manager, the dashboard should display information that helps them
+                make decisions about vehicle maintenance and fuel consumption. UCD is
+                important because it ensures that the dashboard is easy to use, intuitive,
+                and meets the user's needs.
             </p>
             <p>
-                After that, we started looking at different neural networks, tried to find one that would meet our requirement, and Recurrent Neural Network (hereinafter called the RNN) were therefore our next target. Compared to the previous algorithm, its activation function is non-linear, and the fact that RNN can feed the previous output back into the network as the next input would allow it to give relatively reliable predictions based on past data. However, during initial testing of the constructed RNN model, we found that two datasets with large difference in time span (2 years/5 years) produced similar predictive trends. This is because the gradients will become very small as the information is passed through the network, so after a long period of data process, our network is unable to retain information from earlier time steps. In this case, we reconsidered the availability of the RNN in our project. Fortunately, there is an optimized version of RNN, called Long short-term memory, by introducing gating mechanisms and memory units that allow the network to selectively update or forget previous data, we solved the problem of disappearing gradients in RNN. 
+                2. Minimalism: Minimalism is a design principle that involves using only
+                the most essential elements in the design. In the context of a carbon
+                analysis dashboard for Volvo, this means displaying only the most relevant
+                and necessary data to avoid overwhelming the user with too much
+                information. For example, instead of displaying every single carbon
+                emission statistic, the dashboard could display a few key metrics and allow
+                the user to drill down for more detailed information. Minimalism is
+                important because it helps the user focus on the most important information
+                and reduces cognitive overload.
             </p>
             <p>
-                For data pre-processing, we originally envisaged using the k-means clustering algorithm to remove abnormal data from the dataset and to classify the dataset. While in subsequent coding sessions, we discarded this algorithm, mainly because this algorithm requires manual pre-setting of parameters, which is inefficient. For data cleaning, we used APIs from pandas in python to remove outliers and fill in missing values easily. On the other hand, since the data from our client has already been broken down according to its source, we do not need to repeat this step.
+                3. Consistency: Consistency is a design principle that involves using a
+                consistent layout, typography, and color scheme throughout the dashboard.
+                This helps the user understand the relationships between different elements
+                on the dashboard and makes it easier to navigate. For example, if all of
+                the buttons on the dashboard are the same color, the user will know that
+                they are all clickable. Consistency is important because it helps the user
+                feel familiar and comfortable with the dashboard, which in turn makes it
+                easier to use.
+            </p>
+            <p>
+                4. Accessibility: Accessibility is a design principle that involves making
+                sure that the dashboard can be used by all users, including those with
+                disabilities. This includes designing for color blindness and ensuring that
+                the text is legible and easy to read. For example, the dashboard should use
+                a color scheme that is accessible for users with color blindness and font
+                sizes that are large enough to be legible for all users. Accessibility is
+                important because it ensures that the dashboard is usable by the widest
+                possible audience.
+            </p>
+            <p>
+                5. Visual Hierarchy: Visual hierarchy is a design principle that involves
+                using visual cues such as color, size, and contrast to guide the user's
+                attention to the most important information. For example, the most
+                important information on the dashboard could be displayed in a larger font
+                size or a brighter color to make it stand out. Visual hierarchy is
+                important because it helps the user quickly and easily understand the data
+                by directing their attention to the most important information.
+            </p>
+            <p>
+                6. Feedback: Feedback is a design principle that involves providing the
+                user with feedback to indicate that their actions have been recognized and
+                to confirm that the dashboard is functioning correctly. For example, when
+                the user clicks a button on the dashboard, the button could change color or
+                display a message to confirm that the action was successful. Feedback is
+                important because it helps the user understand how to use the dashboard and
+                confirms that their actions are having the intended effect.
+            </p>
+            <p>
+                7. Flexibility: Flexibility is a design principle that involves designing
+                the dashboard to be flexible enough to adapt to the user's needs. For
+                example, the dashboard could allow the user to customize the information
+                displayed or choose different visualizations. Flexibility is important
+                because it ensures that the dashboard is customizable to the user's needs
+                and preferences, which in turn makes it more useful and effective.
             </p>
 
           </div>
