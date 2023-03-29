@@ -108,52 +108,51 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
-      <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-              <h2>Description of the Algorithm</h2>
-            </div>
-            
-          <p>
-              In our project we have used algorithms in two parts.
-          </p>
-          <p>
-              For the first part, in this part We tried many different approaches to ML
-              (Machine Learning) Models to achieve our goal. Finally, we used the SARIMA
-              (Seasonal Autoregressive Integrated Moving Average) model, which is an
-              extension of the ARIMA (Autoregressive Integrated Moving Average) model. In
-              this part of our project is about forecasting the future carbon emission of
-              data Volvo data resource groups, which have significant time correlation
-              and some seasonal patterns, so using time series analysis is quite suitable
-              for this case. The SARIMA model can predict future data by analyzing trends
-              and seasonal cyclical patterns in the data and incorporating forecasting
-              techniques. This model can capture seasonal patterns in the data to better
-              predict future changes in the data.
-          </p>
-          <p>
-              For the second part, we chose to write a program to generate a set of rules
-              for conditions to create the prompt that we can pass to OpenAI API to ask
-              advice about how to reduce the carbon emission for certain servers in
-              certain locations.
-          </p>
+                   <!-- ======= About Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200" >
+        <div class="container">
+  
+         <div style="padding: 20px;">
+          <div class="section-title">
+            <h2>Description of the Algorithm</h2>
           </div>
+          
+          <p>
+            In our project we have used algorithms in two parts.
+        </p>
+        <p>
+            For the first part, in this part We tried many different approaches to ML
+            (Machine Learning) Models to achieve our goal. Finally, we used the SARIMA
+            (Seasonal Autoregressive Integrated Moving Average) model, which is an
+            extension of the ARIMA (Autoregressive Integrated Moving Average) model. In
+            this part of our project is about forecasting the future carbon emission of
+            data Volvo data resource groups, which have significant time correlation
+            and some seasonal patterns, so using time series analysis is quite suitable
+            for this case. The SARIMA model can predict future data by analyzing trends
+            and seasonal cyclical patterns in the data and incorporating forecasting
+            techniques. This model can capture seasonal patterns in the data to better
+            predict future changes in the data.
+        </p>
+        <p>
+            For the second part, we chose to write a program to generate a set of rules
+            for conditions to create the prompt that we can pass to OpenAI API to ask
+            advice about how to reduce the carbon emission for certain servers in
+            certain locations.
+        </p>
+          
         </div>
-
       </div>
-    </section><!-- End About Section -->
+      </section><!-- End About Section -->
 
-    <section class="about" data-aos="fade-up">
-      <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-              <h2>SARIMA</h2>
-            </div>
+
+
+      <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200" >
+        <div class="container">
+  
+         <div style="padding: 20px;">
+          <div class="section-title">
+            <h2>SARIMA</h2>
+          </div>
 
           <p>
               In this section I will explain what SARIMA is, what characteristics SARIMA
@@ -193,6 +192,7 @@
               stationary time series is a crucial requirement for predictive analysis as
               non-stationary time series tend to be unpredictable.
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/Stationary data and Non-Stationary data Graph.png"/>
           <p>
               <strong>Seasonality</strong>
           </p>
@@ -284,6 +284,7 @@
               requirement of stationary time series, which can then be analyzed and
               predicted using the analysis of stationary time series.
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/Diffenecing.png"/>
           <p>
               <strong>Autoregressive (AR) Model</strong>
           </p>
@@ -300,6 +301,7 @@
           <p>
               X(t) = c + φ1 * X(t-1) + φ2 * X(t-2) + … + φp * X(t-p) + ε(t)
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/AR.png"/>
           <p>
               [3]
           </p>
@@ -336,6 +338,7 @@
           <p>
               Specifically, the MA (q) model can be expressed as the following equation:
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/MA.png"/>
           <p>
               [4]
           </p>
@@ -362,6 +365,7 @@
               is -1, if it is 0 means there is no correlation between the two, which is a
               measure of the indicator.
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/correlation coefficient.png"/>
           <p>
               Autocorrelation Function (ACF) function is a statistic used to describe the
               autocorrelation of a time series, it is not a measure of two different de
@@ -380,11 +384,13 @@
           <p>
               The ACF equation is like this:
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/ACF_equation.png"/>
           <p>
               We will then draw a line graph of the ACF values with a 95% confidence
               interval and choose the q-value for the SARIMA model based on the
               relationship of the points falling into the confidence interval.
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/ACF_Graph.png"/>
           <p>
               <strong>Partial Autocorrelation Function (PACF)</strong>
           </p>
@@ -404,6 +410,7 @@
           <p>
               The ACF equation is like this:
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/PACF_equation.png"/>
           <p>
               [5]
           </p>
@@ -412,6 +419,7 @@
               interval and choose the p-value for the SARIMA model based on the
               relationship of the points falling into the confidence interval.
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/PACF_graph.png"/>
           <p>
               <strong> </strong>
           </p>
@@ -449,6 +457,7 @@
           <p>
               We can then draw a visual heat map based on the BIC values as follows.
           </p>
+          <img width="800" height="400" src="assets/img/algorithms/BIC.png"/>
           <p>
               <strong>Training and testing sets</strong>
           </p>
@@ -542,6 +551,7 @@
           <p>
               Examples of Residuals Histogram are drawn:
           </p>
+          <img width="800" height="500" src="assets/img/algorithms/Residuals Histogram.png"/>
           <p>
               <strong>Quantile-Quantile plot</strong>
           </p>
@@ -565,6 +575,7 @@
           <p>
               Examples of QQ plot are drawn:
           </p>
+          <img width="800" height="500" src="assets/img/algorithms/QQ_plot.png"/>
           <p>
               <strong>Suggestions to improve the performance</strong>
           </p>
@@ -593,14 +604,13 @@
     </section><!-- End About Section -->
 
     <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
-      <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-              <h2>Prompt Generation</h2>
-            </div>
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200" >
+        <div class="container">
+  
+         <div style="padding: 20px;">
+          <div class="section-title">
+            <h2>Prompt Generation</h2>
+          </div>
             
 
           <p>
@@ -688,6 +698,7 @@
               AdviceType to provide targeted advice for different situations to help
               reduce carbon emissions.
           </p>
+          <img width="800" height="700" src="assets/img/algorithms/prompt generate flowchart.png"/>
           </div>
         </div>
 
@@ -695,14 +706,13 @@
     </section><!-- End About Section -->
 
      <!-- ======= About Section ======= -->
-     <section class="about" data-aos="fade-up">
-      <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-              <h2>Conclusion</h2>
-            </div>
+     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200" >
+        <div class="container">
+  
+         <div style="padding: 20px;">
+          <div class="section-title">
+            <h2>Conclusion</h2>
+          </div>
             
             
           <p>
@@ -731,14 +741,13 @@
     </section><!-- End About Section -->
 
     <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
-      <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-                <h2>References</h2>
-              </div>
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200" >
+        <div class="container">
+  
+         <div style="padding: 20px;">
+          <div class="section-title">
+            <h2>References</h2>
+          </div>
 
             <ul>
               <li>1.	Tableau.com, “Time Series Analysis: Definition, Types, Techniques, and When It's Used” [Online] Available at: <a href="http://www.tableau.com/learn/articles/time-series-analysis">http://www.tableau.com/learn/articles/time-series-analysis</a></li>

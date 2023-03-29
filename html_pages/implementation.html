@@ -109,62 +109,76 @@
     </section><!-- End About Section -->
 
     <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
+    <section id="future-work" class="why-us section-bg" data-aos="fade-up" date-aos-delay="100">
       <div class="container">
-        
-        <div class="row">
-          <div class="">
-            <div class="section-title">
-                <h2>Implementation Overview</h2>
-              </div>
 
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The carbon dashboard is implemented as web app. It has a React Native front end and a REST API backend implemented using flask. A request-response design is used. The general data flow through the application is: state change in the UI (this may be a user changing page or options within a page), causes a HTTP request for data to be sent to the back end, causes the collection of data from an external sources, &nbsp; calculations performed by server and response formulated, data is sent back to the front end as JSON, front end displays data in as a chart, graph or text.</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>To understand our project, it is important to have a basic understanding of Azure. It is a cloud computing platform offered by Microsoft that Volvo uses to host their sales infrastructure. A resource is an entity that represents a service or a piece of infrastructure that you can provision in the cloud. These might be virtual machines, storage accounts, databases, networking components, and web apps. Resources are located at one of Azure&rsquo;s predefined regions, for example &ldquo;uksouth&rdquo; or &ldquo;eastus&rdquo;. A resource group is a logical container that helps you organize and manage related resources in Azure. Resource groups provide a way to group resources together, so you can manage them as a single entity. See the image below for a breakdown of this hierarchy:</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;text-align:center;'><br></p>
+      <div class="row">
+        <div style="padding: 20px;">
+          <div class="section-title">
+            <h2>Implementation Overview</h2>
+      </div>
 
-<img src="assets/img/Implementation Images/1.png" style="display: block; margin: 0 auto;"/>
+              <p>
+                To understand our project, it is important to have a basic understanding of
+                Azure. It is a cloud computing platform offered by Microsoft that Volvo
+                uses to host their sales infrastructure. A resource is an entity that
+                represents a service or a piece of infrastructure that you can provision in
+                the cloud. These might be virtual machines, storage accounts, databases,
+                networking components, and web apps. Resources are located at one of
+                Azure’s predefined regions, for example “uksouth” or “eastus”. A resource
+                group is a logical container that helps you organize and manage related
+                resources in Azure. Resource groups provide a way to group resources
+                together, so you can manage them as a single entity. See the image below
+                for a breakdown of this hierarchy:
+            </p>
 
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;text-align:center;'><br></p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Avanade have provided us with access to three resources groups within their &ldquo;Emerging Tech&rdquo; subscription. Together these contain approximately 30 resources.</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Our website has 5 main sections which each contain their own unique charts, graphs and text.</p>
-<ol style="list-style-type: decimal;">
-    <li>Home<ol style="list-style-type: lower-alpha;">
-            <li>Real time world map of carbon emissions across all resource groups within their subscription</li>
+
+
+          <img src="assets/img/Implementation Images/1.png" style="display: block; margin: 0 auto;"/>
+          <br>
+          <p>
+            Avanade have provided us with access to three resources groups within their
+            “Emerging Tech” subscription. Together these contain approximately 30
+            resources.
+        </p>
+        <p>
+            Our website has 5 main sections which each contain their own unique charts,
+            graphs and text.
+        </p>
+
+        <ol>
+            <li>Home<ol type="a">
+                    <li>Real time world map of carbon emissions across all resource groups within their subscription</li>
+                </ol>
+            </li>
+            <li>Past Data<ol type="a">
+                    <li>Line graph of past emissions for a particular resource group</li>
+                    <li>Bar chart of the power type used per region by a particular resource group</li>
+                    <li>Pie chart of renewable vs non-renewable emissions for a particular resource group</li>
+                </ol>
+            </li>
+            <li>Future Data<ol type="a">
+                    <li>Predicted next three days future emissions per resource in resource group</li>
+                    <li>Predicted next three days future emissions per region in resource group</li>
+                </ol>
+            </li>
+            <li>Resource Group Based Advice<ol type="a">
+                    <li>Advice for how to make the energy types used by each resource more sustainable</li>
+                    <li>Advice for where to move each resource to in order to make it more sustainable</li>
+                    <li>Advice for how to change the configuration of each resource to make it more sustainable</li>
+                    <li>Advice for which cooling type each resource could be changed to make it more sustainable</li>
+                </ol>
+            </li>
+            <li>Region Based Advice<ol type="a">
+                    <li>Advice for how to make the energy types used by each resource more sustainable</li>
+                    <li>Advice for where to move each resource to in order to make it more sustainable</li>
+                    <li>Advice for how to change the configuration of each resource to make it more sustainable</li>
+                    <li>Advice for which cooling type each resource could be changed to make it more sustainable</li>
+                </ol>
+            </li>
         </ol>
-    </li>
-    <li>Past Data<ol style="list-style-type: lower-alpha;">
-            <li>Line graph of past emissions for a particular resource group</li>
-            <li>Bar chart of the power type used per region by a particular resource group</li>
-            <li>Pie chart of renewable vs non-renewable emissions for a particular resource group</li>
-        </ol>
-    </li>
-    <li>Future Data<ol style="list-style-type: lower-alpha;">
-            <li>Predicted next three days future emissions per resource in resource group</li>
-            <li>Predicted next three days future emissions per region in resource group</li>
-        </ol>
-    </li>
-    <li>Resource Group Based Advice<ol style="list-style-type: lower-alpha;">
-            <li>Advice for how to make the energy types used by each resource more sustainable</li>
-            <li>Advice for where to move each resource to in order to make it more sustainable</li>
-            <li>Advice for how to change the configuration of each resource to make it more sustainable</li>
-            <li>Advice for which cooling type each resource could be changed to make it more sustainable</li>
-        </ol>
-    </li>
-    <li>Region Based Advice<ol style="list-style-type: lower-alpha;">
-            <li>Advice for how to make the energy types used by each resource more sustainable</li>
-            <li>Advice for where to move each resource to in order to make it more sustainable</li>
-            <li>Advice for how to change the configuration of each resource to make it more sustainable</li>
-            <li>Advice for which cooling type each resource could be changed to make it more sustainable</li>
-        </ol>
-    </li>
-</ol>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>This implementation will focus on one feature from each section.</p>
+
+            <p>This implementation will focus on one feature from each section.</p>
             
           </div>
         </div>
@@ -182,98 +196,287 @@
               <h2>Tools and Dependencies</h2>
             </div>
             
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><span style="font-size:19px;color:black;">Main Technologies</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:19px;color:black;">We have used <em>JavaScript</em> and <em>Python</em> as our main languages and <em>Visual Studio Code</em> as our IDE.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><span style="font-size:19px;color:black;">Tools &amp; Dependencies</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">We applied a number of tools and dependencies to help us build our dashboard.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><span style="font-size:19px;color:black;">React</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">React is a popular JavaScript library for building user interfaces (UIs) using a component-based architecture and virtual DOM, providing fast and efficient updates to UIs.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">We use React as a frontend to present real-time emission data from the backend to the user, it also allows us to handle user interactions such as filtering data and switching pages.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><strong><span style="font-size:19px;color:black;">Material-UI</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">Material-UI (MUI) is a UI library in React. It follows Google&apos;s Material Design guidelines to offer a comprehensive suite of UI tools, which helps developer to ship their new features faster.</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">We used MUI to build a responsive and professional UI for our dashboard by its pre-built UI components such as borders and buttons.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><strong><span style="font-size:19px;color:black;">Nivo</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">Nivo</span><span style="font-size:19px;color:black;">&nbsp;is a&nbsp;</span><span style="font-size:19px;color:black;">Data&nbsp;</span><span style="font-size:19px;color:black;">visualisation library in React. It provides a wide range of customisable and interactive chart components.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">We used Nivo&apos;s pre-built components such as line, bar, and pie charts to display emissions data. Nivo&apos;s animation is applied to provide dynamic effects to our charts, making the data more engaging.</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><span style="font-size:19px;color:black;">Flask</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">Flask is a lightweight web framework for Python that provides tools and libraries for building web applications and APIs, with a simple and intuitive syntax and a modular design.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">We use Flask to build the backend API for the dashboard to allow the frontend to communicate with the server and retrieve data for display. Several API endpoints are built by Flask&apos;s routing system to handle requests for different data sets.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><strong><span style="font-size:19px;color:black;">Azure SDK</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">Azure SDK is a collection of libraries and APIs for developers to build applications and services that integrate with Microsoft Azure.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">In this project, we used the Azure SDK to carbon related&nbsp;</span><span style="font-size:19px;color:black;">data</span><span style="font-size:19px;color:black;">&nbsp;from Volvo, and displayed it on the dashboard, to provide information like real-time carbon emission data, CPU usage. </span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style='font-size:12px;font-family:"Segoe UI",sans-serif;color:#666666;background:white;'>&nbsp;</span><span style='font-size:15px;font-family:"PingFang SC Regular",sans-serif;color:black;'>&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><span style="font-size:19px;color:black;">Package Manager</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><strong><span style="font-size:19px;color:black;">Pip</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:19px;color:black;">&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">Pip is a package installer for Python that makes it easy to install and manage Python packages and their dependencies.&nbsp;</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">By using pip, we were able to easily install the packages needed for the dashboard, such as Flask and the Azure SDK. This allowed us to quickly set up our development environment and easily check the version of the packages.</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><strong><span style="font-size:19px;color:black;">Npm</span></strong><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">Npm is a package manager that makes it easy to install and manage JavaScript packages and libraries.</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">In this project, we used npm to install, manage and update the required dependencies and packages for our React frontend, including libraries like Material UI, Nivo.</span><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:19px;color:black;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><strong><span style="font-size:14px;font-family:DengXian;">Pandas</span></strong><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:12px;font-family:&quot;Segoe UI&quot;,sans-serif;color:black;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Pandas is an open-source data manipulation and analysis library for the Python programming language.&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We use Pandas to preprocess the data set to DataFrame format and then split the train and test set before we use the data to train the model to predict the future carbon emission data.&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><strong><span style="font-size:14px;font-family:DengXian;">Matplotlib</span></strong><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:12px;font-family:&quot;Segoe UI&quot;,sans-serif;color:black;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Matplotlib is a Python library used for creating visualizations such as line charts, scatter plots, histograms, bar charts, and more.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We use Matplotlib in the ML (Machine Learning) part to plot the histogram of residual to check the accuracy of model, we use Matplotlib to draw a visual heat map of BIC (Bayesian Information Criterion) to help us choose the p &amp; q parameters. We use Matplotlib in differencing and Seasonality as well, just to plot the graphs help us catching the trend of Stationarity and Seasonality.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><strong><span style="font-size:14px;font-family:DengXian;">Statsmodels</span></strong><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:12px;font-family:&quot;Segoe UI&quot;,sans-serif;color:black;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Statsmodels is a Python library for statistical modeling and analysis of data. It provides a wide range of statistical methods for exploring data, estimating statistical models, and performing statistical tests.&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We use the time series analysis model SARIMAX in Statsmodels as our ML model to predict the future carbon emission data. And we use the time series model ARIMA (Autoregressive Integrated Moving Average) in Statsmodels in BIC function by iterating over all possible (p, q) in ARIMA model to help us choose the most suitable value.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><strong><span style="font-size:14px;font-family:DengXian;">Numpy</span></strong><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:12px;font-family:&quot;Segoe UI&quot;,sans-serif;color:black;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">NumPy is a Python library used for working with arrays, matrices, and mathematical operations.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We use one function in numpy which is unravel_index which helps us to locate the minimum value of p and q.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><strong><span style="font-size:14px;font-family:DengXian;">OpenAI</span></strong><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:12px;font-family:&quot;Segoe UI&quot;,sans-serif;color:black;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Developers can access numerous AI tools and models, such as natural language processing, image recognition, and others, using OpenAI&apos;s API.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We use it to generate future advice which corresponds to our formatted generated prompts.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-            <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style='font-size:12px;font-family:"Segoe UI",sans-serif;color:black;'>&nbsp;</span></p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-
-            
+            <p>
+              <strong>Main Technologies</strong>
+          </p>
+          <p>
+              <img
+                  width="322"
+                  height="90"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png"
+                  alt="Icon
+          
+          Description automatically generated"
+              />
+              We have used <em>JavaScript</em> and <em>Python</em> as our main languages
+              and <em>Visual Studio Code</em> as our IDE.
+          </p>
+          <p>
+              <strong>Tools &amp; Dependencies</strong>
+          </p>
+          <p>
+              We applied a number of tools and dependencies to help us build our
+              dashboard.
+          </p>
+          <p>
+              <strong>React</strong>
+          </p>
+          <p>
+              <img
+                  width="89"
+                  height="89"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png"
+                  alt="Icon
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              React is a popular JavaScript library for building user interfaces (UIs)
+              using a component-based architecture and virtual DOM, providing fast and
+              efficient updates to UIs.
+          </p>
+          <p>
+              We use React as a frontend to present real-time emission data from the
+              backend to the user, it also allows us to handle user interactions such as
+              filtering data and switching pages.
+          </p>
+          <p>
+              <img
+                  width="81"
+                  height="81"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png"
+                  alt="Icon
+          
+          Description automatically generated"
+              />
+              <strong>Material-UI</strong>
+          </p>
+          <p>
+              Material-UI (MUI) is a UI library in React. It follows Google's Material
+              Design guidelines to offer a comprehensive suite of UI tools, which helps
+              developer to ship their new features faster.
+          </p>
+          <p>
+              We used MUI to build a responsive and professional UI for our dashboard by
+              its pre-built UI components such as borders and buttons.
+          </p>
+          <p>
+              <img
+                  width="81"
+                  height="81"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.png"
+                  alt="Icon
+          
+          Description automatically generated"
+              />
+              <strong>Nivo</strong>
+          </p>
+          <p>
+              Nivo is a Data visualisation library in React. It provides a wide range of
+              customisable and interactive chart components.
+          </p>
+          <p>
+              We used Nivo's pre-built components such as line, bar, and pie charts to
+              display emissions data. Nivo's animation is applied to provide dynamic
+              effects to our charts, making the data more engaging.
+          </p>
+          <p>
+              <strong>Flask</strong>
+          </p>
+          <p>
+              <img
+                  width="89"
+                  height="80"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png"
+                  alt="A picture containing invertebrate, worm
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              Flask is a lightweight web framework for Python that provides tools and
+              libraries for building web applications and APIs, with a simple and
+              intuitive syntax and a modular design.
+          </p>
+          <p>
+              We use Flask to build the backend API for the dashboard to allow the
+              frontend to communicate with the server and retrieve data for display.
+              Several API endpoints are built by Flask's routing system to handle
+              requests for different data sets.
+          </p>
+          <p>
+              <img
+                  width="89"
+                  height="89"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png"
+              />
+              <strong>Azure SDK</strong>
+          </p>
+          <p>
+              Azure SDK is a collection of libraries and APIs for developers to build
+              applications and services that integrate with Microsoft Azure.
+          </p>
+          <p>
+              In this project, we used the Azure SDK to carbon related data from Volvo,
+              and displayed it on the dashboard, to provide information like real-time
+              carbon emission data, CPU usage. 
+          </p>
+          <p>
+              <strong>Package Manager</strong>
+          </p>
+          <p>
+              <strong>Pip</strong>
+          </p>
+          <p>
+              <img
+                  width="86"
+                  height="48"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.png"
+                  alt="A picture containing text, clipart
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              Pip is a package installer for Python that makes it easy to install and
+              manage Python packages and their dependencies.
+          </p>
+          <p>
+              By using pip, we were able to easily install the packages needed for the
+              dashboard, such as Flask and the Azure SDK. This allowed us to quickly set
+              up our development environment and easily check the version of the
+              packages.
+          </p>
+          <p>
+              <img
+                  width="89"
+                  height="29"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image009.png"
+              />
+              <strong>Npm</strong>
+          </p>
+          <p>
+              Npm is a package manager that makes it easy to install and manage
+              JavaScript packages and libraries.
+          </p>
+          <p>
+              In this project, we used npm to install, manage and update the required
+              dependencies and packages for our React frontend, including libraries like
+              Material UI, Nivo.
+          </p>
+          <p>
+              <strong>Pandas</strong>
+          </p>
+          <p>
+              <img
+                  width="97"
+                  height="129"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.png"
+                  alt="A picture containing text, clipart, vector graphics
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              Pandas is an open-source data manipulation and analysis library for the
+              Python programming language.
+          </p>
+          <p>
+              We use Pandas to preprocess the data set to DataFrame format and then split
+              the train and test set before we use the data to train the model to predict
+              the future carbon emission data.
+          </p>
+          <p>
+              <strong>Matplotlib</strong>
+          </p>
+          <p>
+              <img
+                  width="104"
+                  height="104"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image011.png"
+                  alt="Chart, radar chart
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              Matplotlib is a Python library used for creating visualizations such as
+              line charts, scatter plots, histograms, bar charts, and more.
+          </p>
+          <p>
+              We use Matplotlib in the ML (Machine Learning) part to plot the histogram
+              of residual to check the accuracy of model, we use Matplotlib to draw a
+              visual heat map of BIC (Bayesian Information Criterion) to help us choose
+              the p &amp; q parameters. We use Matplotlib in differencing and Seasonality
+              as well, just to plot the graphs help us catching the trend of Stationarity
+              and Seasonality.
+          </p>
+          <p>
+              <strong>Statsmodels</strong>
+          </p>
+          <p>
+              <img
+                  width="113"
+                  height="111"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image012.png"
+                  alt="Icon
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              Statsmodels is a Python library for statistical modeling and analysis of
+              data. It provides a wide range of statistical methods for exploring data,
+              estimating statistical models, and performing statistical tests.
+          </p>
+          <p>
+              We use the time series analysis model SARIMAX in Statsmodels as our ML
+              model to predict the future carbon emission data. And we use the time
+              series model ARIMA (Autoregressive Integrated Moving Average) in
+              Statsmodels in BIC function by iterating over all possible (p, q) in ARIMA
+              model to help us choose the most suitable value.
+          </p>
+          <p>
+              <strong>Numpy</strong>
+          </p>
+          <p>
+              <img
+                  width="141"
+                  height="150"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image013.png"
+                  alt="A picture containing logo
+          
+          Description automatically generated"
+              />
+          </p>
+          <p>
+              NumPy is a Python library used for working with arrays, matrices, and
+              mathematical operations.
+          </p>
+          <p>
+              We use one function in numpy which is unravel_index which helps us to
+              locate the minimum value of p and q.
+          </p>
+          <p>
+              <strong>OpenAI</strong>
+          </p>
+          <p>
+              <img
+                  width="148"
+                  height="150"
+                  src="file:////Users/Ramit/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image014.png"
+              />
+          </p>
+          <p>
+              Developers can access numerous AI tools and models, such as natural
+              language processing, image recognition, and others, using OpenAI's API.
+          </p>
+          <p>
+              We use it to generate future advice which corresponds to our formatted
+              generated prompts.
+          </p>
+          
 
           </div>
         </div>        
@@ -290,42 +493,46 @@
               <h2>Home</h2>
             </div>
             
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Home contains a realtime carbon emissions graph across all resources in the user&rsquo;s subscription:</p>
+            <p>Home contains a realtime carbon emissions graph across all resources in the user's subscription:</p>
 
             <div class="row">
               <div style="padding: 30px;">
                 <img src="assets/img/Implementation Images/2.png" class="img-fluid" alt="">
               </div>
               </div>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'><br></p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>This subscription only has resources in four regions:</p>
-            <ul style="list-style-type: disc;">
+            <p><br></p>
+            <p>This subscription only has resources in four regions:</p>
+            <ul>
                 <li>UK (uksouth)</li>
                 <li>Ireland (europenorth)</li>
                 <li>Netherlands (europewest)</li>
                 <li>USA (useast)</li>
             </ul>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The view uses two endpoints: &lsquo;/locations&rsquo; and &lsquo;/current-emissions?location=&lt;location&gt;&rsquo;.</p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>When this page mounts, it fetches the locations from the back end and then makes parallel HTTP requests to get the current emissions at each location. The map is populated when all these requests have resolved. Then it updates the data every 30 seconds using the setInterval function. &nbsp;This front end code is shown below:</p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+            <p>
+              The view uses two endpoints: ‘/locations’ and
+              ‘/current-emissions?location=&lt;location&gt;’.
+            </p>
+            <p>
+              When this page mounts, it fetches the locations from the back end and then
+              makes parallel HTTP requests to get the current emissions at each location.
+              The map is populated when all these requests have resolved. Then it updates
+              the data every 30 seconds using the setInterval function. This front end
+              code is shown below:
+          </p>
             <div class="row">
               <div style="padding: 30px;">
                 <img src="assets/img/Implementation Images/3.png" class="img-fluid" alt="">
               </div>
               </div>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>To backend on receiving the current-emissions request makes a dictionary of all resources at in that location. This is speed up by using the resource cache in the Azure client. It then makes a request to get the last minute&rsquo;s emissions for each resource and sums them together to get a total for that region. This is done by making a request using the Azure SDK to get the computer value proxy which is then multiplied by the carbon emissions coefficient calculated from an Electricity Mapper past emissions request. This is returned as JSON with the following structure:</p>
+            <p>&nbsp;</p>
+            <p>To backend on receiving the current-emissions request makes a dictionary of all resources at in that location. This is speed up by using the resource cache in the Azure client. It then makes a request to get the last minute&rsquo;s emissions for each resource and sums them together to get a total for that region. This is done by making a request using the Azure SDK to get the computer value proxy which is then multiplied by the carbon emissions coefficient calculated from an Electricity Mapper past emissions request. This is returned as JSON with the following structure:</p>
             <div class="row">
               <div style="padding: 30px;">
                 <img src="assets/img/Implementation Images/4.png" class="img-fluid" alt="">
               </div>
               </div>
-            <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+            <p>&nbsp;</p>
             
-            
-
           </div>
         </div>        
       </div>
@@ -341,26 +548,26 @@
             <h2>Past Usage</h2>
           </div>
           
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The past emissions screen shows the past emissions for a resource group. The user can change which resource group using a drop-down selector. The past usage screen looks like this:</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>The past emissions screen shows the past emissions for a resource group. The user can change which resource group using a drop-down selector. The past usage screen looks like this:</p>
+          <p>&nbsp;</p>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/5.png" class="img-fluid" alt="">
             </div>
             </div>
 
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The past usage page begins by making a request to the / past-resource-emissions/&lt;resourceGroup&gt; endpoint. This occurs when the page loads and when the user changes which resource group they want to view. This is the sequence diagram of that request:</p>
+          <p>&nbsp;</p>
+          <p>The past usage page begins by making a request to the / past-resource-emissions/&lt;resourceGroup&gt; endpoint. This occurs when the page loads and when the user changes which resource group they want to view. This is the sequence diagram of that request:</p>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/6.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>We implemented a resource cache as we found getting the resources in a particular resource group via the Azure SDK to be a slow operation. This works by making a request to the Azure SDK is the cache is empty or over an hour old. This populates a dictionary of resource groups to a list of resources in that group which is stored in the AzureClient singleton. The cache itself is agnostic to its data source as one of its initialisation parameters is a fetch resources function; this takes advantage of functions being objects in Python.</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>We implemented a resource cache as we found getting the resources in a particular resource group via the Azure SDK to be a slow operation. This works by making a request to the Azure SDK is the cache is empty or over an hour old. This populates a dictionary of resource groups to a list of resources in that group which is stored in the AzureClient singleton. The cache itself is agnostic to its data source as one of its initialisation parameters is a fetch resources function; this takes advantage of functions being objects in Python.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
           
           
         </div>
@@ -378,149 +585,227 @@
             <h2>Future Usage</h2>
           </div>
           
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The future emissions screen shows the predict next three days of emissions for a resource group broken down by resource and location. The user can change which resource group using a drop-down selector. The future usage screen looks like this:</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'><br></p>
+          <p>&nbsp;</p>
+<p>The future emissions screen shows the predict next three days of emissions for a resource group broken down by resource and location. The user can change which resource group using a drop-down selector. The future usage screen looks like this:</p>
+<p><br></p>
 <div class="row">
 <div style="padding: 30px;">
   <img src="assets/img/Implementation Images/7.png" class="img-fluid" alt="">
 </div>
 </div>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>It works by making two parallel requests to get the data for each graph.</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>A cache is also used here as generating the predictions can take up to 30 seconds per resource. This would be too slow, so when the server starts it generates all the predictions before it serves its first request and stores them in a cache. This cache is updated every hour by a background process:</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+<p>&nbsp;</p>
+<p>It works by making two parallel requests to get the data for each graph.</p>
+<p>A cache is also used here as generating the predictions can take up to 30 seconds per resource. This would be too slow, so when the server starts it generates all the predictions before it serves its first request and stores them in a cache. This cache is updated every hour by a background process:</p>
+<p>&nbsp;</p>
 <div class="row">
 <div style="padding: 30px;">
   <img src="assets/img/Implementation Images/8.png" class="img-fluid" alt="">
 </div>
 </div>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">The future emissions for a particular resource are calculated by passing its past emissions to this function:</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;text-align:justify;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+<p>
+  The future emissions for a particular resource are calculated by passing
+  its past emissions to this function:
+</p>
 <div class="row">
 <div style="padding: 30px;">
   <img src="assets/img/Algorithm Implementation Images/1.png" class="img-fluid" alt="">
 </div>
 </div>
-
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">When the program is called, it passes two parameters one is past_emissions which is a list of dictionary stores all the past_carbon emission in format: ex. [{&quot;date&quot;:&quot;2023-02-10 00:00:00&quot;,&quot;value&quot;:100.0}, {&quot;date&quot;:&quot;2023-02-10 01:00:00&quot;,&quot;value&quot;:154.0}], future_date is a datetime type variable the exact time which we want to predict from now to. But to ensure the accuracy of the data, since our past_emissions data is only for the last 720 hours, which is a bit too little, we&apos;d better predict only the next 3 days.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">After reading the data we first performed data cleaning and format conversion: using the pandas library to convert the data to a DataFrame, converting the &apos;date&apos; column to datetime format and setting it as an index. Then we divided the data set into training set and test set, and we selected the last 360 hours as the training set to generate the prediction data. The conversion to DataFrame makes it easier to filter, sort and resample the data based on timestamps. We also need to slice the data and divide the dataset into a training set and a test set. This slicing operation can be easily performed using a DataFrame.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+<p>
+  When the program is called, it passes two parameters one is past_emissions
+  which is a list of dictionary stores all the past_carbon emission in
+  format: ex. [{"date":"2023-02-10 00:00:00","value":100.0},
+  {"date":"2023-02-10 01:00:00","value":154.0}], future_date is a datetime
+  type variable the exact time which we want to predict from now to. But to
+  ensure the accuracy of the data, since our past_emissions data is only for
+  the last 720 hours, which is a bit too little, we'd better predict only the
+  next 3 days.
+</p>
+<p>
+  After reading the data we first performed data cleaning and format
+  conversion: using the pandas library to convert the data to a DataFrame,
+  converting the 'date' column to datetime format and setting it as an index.
+  Then we divided the data set into training set and test set, and we
+  selected the last 360 hours as the training set to generate the prediction
+  data. The conversion to DataFrame makes it easier to filter, sort and
+  resample the data based on timestamps. We also need to slice the data and
+  divide the dataset into a training set and a test set. This slicing
+  operation can be easily performed using a DataFrame.
+</p>
 
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/2.png" class="img-fluid" alt="">
   </div>
   </div>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Then we will call differencing.py to compute a difference order d that is appropriate for the data we now have in past_emissions.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+  <p>
+    Then we will call differencing.py to compute a difference order d that is
+    appropriate for the data we now have in past_emissions.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/3.png" class="img-fluid" alt="">
   </div>
   </div>
-
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">After we read the data, we will do the data processing. First, we will use the pandas library to convert the data to a DataFrame. Then we will convert the &apos;date&apos; column to datetime format and set it as an index. Set the initial I value to zero.&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-
+  <p>
+    After we read the data, we will do the data processing. First, we will use
+    the pandas library to convert the data to a DataFrame. Then we will convert
+    the 'date' column to datetime format and set it as an index. Set the
+    initial I value to zero.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/4.png" class="img-fluid" alt="">
   </div>
   </div>
-
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">After that, we will execute a while loop to check whether the existing data is stationary enough under the existing difference order, if not, we will perform another difference until the data is stationary enough, and then return the i value as the difference order.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+  <p>
+    After that, we will execute a while loop to check whether the existing data
+    is stationary enough under the existing difference order, if not, we will
+    perform another difference until the data is stationary enough, and then
+    return the i value as the difference order.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/5.png" class="img-fluid" alt="">
   </div>
   </div>
 
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Two functions are called in the while loop: one is calculate_stationarity(data): calculates the stationarity of the time series, using the adfuller function in statsmodels.tsa.stattools to perform the Dickey-Fuller test, the Dickey-Fuller test is a statistical method to test the stationarity of a time, series. In the Dickey-Fuller test, the assumption is that the series has a unit root, which means that the series is not stationary, and then we set a threshold value: 0.05, indicating that if the p-value is less than or equal to this threshold, the hypothesis is not valid, and the data is stationary. Conversely, the data is not stationary. The second one is difference (data, interval=1): calculates the difference of the time series.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-
+  <p>
+    Two functions are called in the while loop: one is
+    calculate_stationarity(data): calculates the stationarity of the time
+    series, using the adfuller function in statsmodels.tsa.stattools to perform
+    the Dickey-Fuller test, the Dickey-Fuller test is a statistical method to
+    test the stationarity of a time, series. In the Dickey-Fuller test, the
+    assumption is that the series has a unit root, which means that the series
+    is not stationary, and then we set a threshold value: 0.05, indicating that
+    if the p-value is less than or equal to this threshold, the hypothesis is
+    not valid, and the data is stationary. Conversely, the data is not
+    stationary. The second one is difference (data, interval=1): calculates the
+    difference of the time series.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/6.png" class="img-fluid" alt="">
   </div>
   </div>
-
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Then we called the get_p_and_q_value function from BIC.py to help us find a function that picks the most appropriate p and q.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-
+  <p>
+    Then we called the get_p_and_q_value function from BIC.py to help us find a
+    function that picks the most appropriate p and q.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/7.png" class="img-fluid" alt="">
   </div>
-  </div>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">As with any other program, we process the data first. Then we preset some variables, let&apos;s say the maximum p and q values are chosen to be 5, and then we preset a matrix of BIC using numpy.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+  </div><p>
+    As with any other program, we process the data first. Then we preset some
+    variables, let's say the maximum p and q values are chosen to be 5, and
+    then we preset a matrix of BIC using numpy.
+</p>
 
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/8.png" class="img-fluid" alt="">
   </div>
   </div>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">The calculation of the BIC value is then performed through two for loops: for all possible combinations of (p, q) and the d values passed in as parameters, a model is created using the ARIMA class in statsmodels.tsa.arima.model, the model is fitted, and the BIC value is calculated. Afterwards, the numpy unravel_index function is used to locate the (p, q) combination corresponding to the minimum BIC value. Finally, the (p, q) combination corresponding to this minimum BIC value is returned as the best p and q values.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-
+  <p>
+      The calculation of the BIC value is then performed through two for loops:
+      for all possible combinations of (p, q) and the d values passed in as
+      parameters, a model is created using the ARIMA class in
+      statsmodels.tsa.arima.model, the model is fitted, and the BIC value is
+      calculated. Afterwards, the numpy unravel_index function is used to locate
+      the (p, q) combination corresponding to the minimum BIC value. Finally, the
+      (p, q) combination corresponding to this minimum BIC value is returned as
+      the best p and q values.
+  </p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/9.png" class="img-fluid" alt="">
   </div>
   </div>
-
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We then choose the p,d,q values that will be used in the previous two function calculations as the p,d,q values that will be used in our model.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">The reason we chose to do this manually instead of having it executed automatically like the first two sets of data ((p,q) and d) is that we only have access to the past month&apos;s data, which is a little too small. This amount of data is a bit too small, sometimes because the change in the data for the month is too small (most likely due to external factors), but we can clearly find that for each resource in each resource group (all our resources) we can find a clear peak value (at the same fixed hour of the day), but As I said before, sometimes this variation is too small (probably because of the influence of external factors on some dates), so it is not an option to use the program to calculate it automatically, because sometimes the seasonality of the data is ignored. So, first we know that the incoming data is hourly span, and then we know that the same hour of the day has a peak value, so we choose to set the m value to 24. Then we extract the data for that hour of the day and do a differential, and then do the BIC function to get the values of P and Q for most of the resources are chosen to be 1, which is the most appropriate.</span><span style="font-size:14px;font-family:DengXian;">&nbsp; But as you can see, we have a completed program for detecting seasonality, and if there is longer Time series data, a larger data set, we can also set the seasonality parameters for automatic identification.</span></p>
+  <p>
+    We then choose the p,d,q values that will be used in the previous two
+    function calculations as the p,d,q values that will be used in our model.
+</p>
+<p>
+    The reason we chose to do this manually instead of having it executed
+    automatically like the first two sets of data ((p,q) and d) is that we only
+    have access to the past month's data, which is a little too small. This
+    amount of data is a bit too small, sometimes because the change in the data
+    for the month is too small (most likely due to external factors), but we
+    can clearly find that for each resource in each resource group (all our
+    resources) we can find a clear peak value (at the same fixed hour of the
+    day), but As I said before, sometimes this variation is too small (probably
+    because of the influence of external factors on some dates), so it is not
+    an option to use the program to calculate it automatically, because
+    sometimes the seasonality of the data is ignored. So, first we know that
+    the incoming data is hourly span, and then we know that the same hour of
+    the day has a peak value, so we choose to set the m value to 24. Then we
+    extract the data for that hour of the day and do a differential, and then
+    do the BIC function to get the values of P and Q for most of the resources
+    are chosen to be 1, which is the most appropriate. But as you can see, we
+    have a completed program for detecting seasonality, and if there is longer
+    Time series data, a larger data set, we can also set the seasonality
+    parameters for automatic identification.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/10.png" class="img-fluid" alt="">
   </div>
   </div>
 
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">This is the program we wrote to detect seasonality of data: our program reads a JSON file (&quot;data.json&quot;) containing time series data, then seasonally decomposes the data, plots the seasonal component, and determines whether there is significant seasonality. If there is significant seasonality, the seasonal component is saved to another JSON file (&quot;seasonal_data.json&quot;). We then manually use the seasonal components to calculate P and Q. As in the previous procedure, we will use pandas to preprocess the data and then use the seasonal_decompose function for the seasonal decomposition and use the multiplicative model. Then plot the seasonal components. Finally, we will determine if the mean of the absolute values of the seasonal components is greater than 1. If the condition is met, we will save the seasonal components to the &quot;seasonal_data.json&quot; file, which will be used to calculate the P and Q values.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+  <p>
+    This is the program we wrote to detect seasonality of data: our program
+    reads a JSON file ("data.json") containing time series data, then
+    seasonally decomposes the data, plots the seasonal component, and
+    determines whether there is significant seasonality. If there is
+    significant seasonality, the seasonal component is saved to another JSON
+    file ("seasonal_data.json"). We then manually use the seasonal components
+    to calculate P and Q. As in the previous procedure, we will use pandas to
+    preprocess the data and then use the seasonal_decompose function for the
+    seasonal decomposition and use the multiplicative model. Then plot the
+    seasonal components. Finally, we will determine if the mean of the absolute
+    values of the seasonal components is greater than 1. If the condition is
+    met, we will save the seasonal components to the "seasonal_data.json" file,
+    which will be used to calculate the P and Q values.
+</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/11.png" class="img-fluid" alt="">
   </div>
   </div>
 
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">First, we create a SARIMA model using the SARIMAX class. SARIMAX is a class in the statsmodels library that is used to construct and fit a SARIMA model.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Parameters of SARIMAX model:</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">train_data is the input training data, usually a time series dataset.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">order= (p, d, q) specifies the three parameters of the ARIMA model and seasonal_order= (P, D, Q, m) specifies the four parameters of the seasonal ARIMA model. These seven parameters take the values of the seven parameters calculated in our previous paragraphs.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We then fit the SARIMA model using the fit() method. This method calculates the estimates of the model parameters using maximum likelihood estimation (MLE). model_fit is a SARIMAXResults object that contains the model parameter estimates, model test statistics, diagnostic plots, and other information about the model fit results.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Overall, we obtain estimates of the model parameters by constructing a SARIMA model and fitting it with the given training data. These parameters will be used later to predict future time series data.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+<p >First, we create a SARIMA model using the SARIMAX class. SARIMAX is a class in the statsmodels library that is used to construct and fit a SARIMA model.</p>
+<p >Parameters of SARIMAX model:</p>
+<p >train_data is the input training data, usually a time series dataset.</p>
+<p >order= (p, d, q) specifies the three parameters of the ARIMA model and seasonal_order= (P, D, Q, m) specifies the four parameters of the seasonal ARIMA model. These seven parameters take the values of the seven parameters calculated in our previous paragraphs.</p>
+<p >We then fit the SARIMA model using the fit() method. This method calculates the estimates of the model parameters using maximum likelihood estimation (MLE). model_fit is a SARIMAXResults object that contains the model parameter estimates, model test statistics, diagnostic plots, and other information about the model fit results.</p>
+<p >Overall, we obtain estimates of the model parameters by constructing a SARIMA model and fitting it with the given training data. These parameters will be used later to predict future time series data.</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/12.png" class="img-fluid" alt="">
   </div>
   </div>
 
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">This code is where we will output the model summary information by printing model_fit.summary(), and model_fit.resid to calculate the residuals, and then plot the histogram and QQ plot to visualize the residuals: using the matplotlib.pyplot library to plot histogram and QQplot using the qqplot function in statsmodels.graphics.gofplots. These are to help us test our model when it is accurate.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">But when we run the website if there is a drawing server will report an error, and we do not need to test if the model is accurate when running the web page. So, we choose to comment on these.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+<p >&nbsp;</span></p>
+
+<p >This code is where we will output the model summary information by printing model_fit.summary(), and model_fit.resid to calculate the residuals, and then plot the histogram and QQ plot to visualize the residuals: using the matplotlib.pyplot library to plot histogram and QQplot using the qqplot function in statsmodels.graphics.gofplots. These are to help us test our model when it is accurate.</p>
+<p >But when we run the website if there is a drawing server will report an error, and we do not need to test if the model is accurate when running the web page. So, we choose to comment on these.</p>
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/13.png" class="img-fluid" alt="">
   </div>
   </div>
 
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Then we called the calculate_step function to a step, which represents how many future data we will predict (hours as an interval).</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+
+<p >Then we called the calculate_step function to a step, which represents how many future data we will predict (hours as an interval).</p>
 
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/14.png" class="img-fluid" alt="">
   </div>
   </div>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">First, we convert the &apos;date&apos; column in past_data to datetime format and set its time zone information to UTC (Coordinated Universal Time) to ensure accurate date comparisons and calculations. This is because we have data from different time zones. Afterwards the time difference between the last two dates in past_data_dates is calculated, i.e., the time interval. Calculate the time difference between future_date and the last date in past_data_dates and convert it to a total number of seconds. Next, divide this time difference by the total number of seconds of time_delta to calculate the number of steps needed, also setting the time zone information of future_date to UTC. return the calculated number of steps. as the predicted number of hours in the future.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+
+<p >First, we convert the &apos;date&apos; column in past_data to datetime format and set its time zone information to UTC (Coordinated Universal Time) to ensure accurate date comparisons and calculations. This is because we have data from different time zones. Afterwards the time difference between the last two dates in past_data_dates is calculated, i.e., the time interval. Calculate the time difference between future_date and the last date in past_data_dates and convert it to a total number of seconds. Next, divide this time difference by the total number of seconds of time_delta to calculate the number of steps needed, also setting the time zone information of future_date to UTC. return the calculated number of steps. as the predicted number of hours in the future.</p>
 
 <div class="row">
   <div style="padding: 30px;">
@@ -528,20 +813,18 @@
   </div>
   </div>
 
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Then use model_fit.forecast and our calculated steps parameter to predict the future carbon emissions and save predictions.index as the corresponding time of the prediction.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+
+<p >Then use model_fit.forecast and our calculated steps parameter to predict the future carbon emissions and save predictions.index as the corresponding time of the prediction.</p>
 
 <div class="row">
   <div style="padding: 30px;">
     <img src="assets/img/Algorithm Implementation Images/16.png" class="img-fluid" alt="">
   </div>
   </div>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Finally, the predictions and predict_time are stored inside a pred_list_dic list by a for loop that loops the number of times of the step. Finally, this list is returned.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'><span style="color:red;">&nbsp;</span></p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-<p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>We set the &lsquo;timeserie&rsquo; prop of the response line React component to true to allow you to hide and show lines in the line graph by clicking on them.</p>
+
+<p >Finally, the predictions and predict_time are stored inside a pred_list_dic list by a for loop that loops the number of times of the step. Finally, this list is returned.</p>
+
+<p>We set the &lsquo;timeserie&rsquo; prop of the response line React component to true to allow you to hide and show lines in the line graph by clicking on them.</p>
 
           
           
@@ -560,9 +843,9 @@
             <h2>Resource Group and Region Advice</h2>
           </div>
           
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>These two pages suggest how the resources in a resource group or region could be more sustainably utilised. The screens look like this:</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>These two pages suggest how the resources in a resource group or region could be more sustainably utilised. The screens look like this:</p>
+          <p>&nbsp;</p>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/9.png" class="img-fluid" alt="">
@@ -573,26 +856,26 @@
                 <img src="assets/img/Implementation Images/10.png" class="img-fluid" alt="">
               </div>
               </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Advice is generated by collecting data about all the resources part of the resource group or in a location, generating a prompt from that data then querying ChatGPT for that data. <strong>Using ChatGPT was at the suggestion of our client.</strong></p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'><strong>&nbsp;</strong></p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Parrelel API calls are made for each advice type (energy type, location, resource configuration, cooling type) when the page mounts or the resource group or location is changed.</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Advice is generated by collecting data about all the resources part of the resource group or in a location, generating a prompt from that data then querying ChatGPT for that data. <strong>Using ChatGPT was at the suggestion of our client.</strong></p>
+          <p><strong>&nbsp;</strong></p>
+          <p>Parrelel API calls are made for each advice type (energy type, location, resource configuration, cooling type) when the page mounts or the resource group or location is changed.</p>
+          <p>&nbsp;</p>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/11.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The sequence diagram for this whole process is shown here:</p>
+          <p>&nbsp;</p>
+          <p>The sequence diagram for this whole process is shown here:</p>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/12.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>This is an example data flow for a user wanting to get energy advice for the &ldquo;europenorth&rdquo; region:</p>
-          <ul style="list-style-type: undefined;">
+          <p>&nbsp;</p>
+          <p>This is an example data flow for a user wanting to get energy advice for the &ldquo;europenorth&rdquo; region:</p>
+          <ul >
               <li>Front end makes a request to the backend with url: <a href="http://127.0.0.1:5000/advice?location=europenorth&adviceType=%20energyType">http://127.0.0.1:5000/advice?location=europenorth&amp;adviceType= energyType</a></li>
               <li>All resources are put into a dictionary with this structure:</li>
           </ul>
@@ -601,19 +884,19 @@
               <img src="assets/img/Implementation Images/13.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <ul style="list-style-type: undefined;">
+          <p>&nbsp;</p>
+          <ul >
               <li>Resources for which the condition &lsquo;resource.location === &ldquo;europenorth&rdquo;&rsquo; doesn&rsquo;t hold removed from the list of resources</li>
               <li>For each matching resource a ResourceEmissionInfo object is created and added to a list called resource_emission_infos. The ResourceEmissionInfo class has the following definition:</li>
           </ul>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+          <p>&nbsp;</p>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/14.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <ul style="list-style-type: undefined;">
+          <p>&nbsp;</p>
+          <ul >
               <li>The attribute resource is the same as what was in the resources dictionary.</li>
               <li>The past weeks emissions are calculated by finding the emissions for that resource each day for the last week and summing them. The emissions for a particular resource are computed in the following way:<ol style="list-style-type: circle;">
                       <li>Each resource has a metrics type that we use to approximate the CPU usage. CPU usage is measured in CPU time where the equivalent number of seconds of a CPU working at 100% capacity is approximated. For example, for a web server resource type we use the &lsquo;transactions&rsquo; metric (this the number of API calls in the given time interval). We assume that each transaction has 100% CPU utilisation for 100ms. So, to get the equivalent number of CPU seconds we multiply the number of transactions by 0.1.</li>
@@ -628,14 +911,14 @@
             </div>
             </div>
 
-          <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:72.0pt;font-size:16px;font-family:"Calibri",sans-serif;'>E.g.. for the first item, at 16:00 on 15/3/2023 &ldquo;europenorth&rdquo; produced 175gCO₂eq/kWh. This can be converted to gCO₂eq/kWs by dividing by 3600 (number of seconds in an hour)</p>
+          <p>E.g.. for the first item, at 16:00 on 15/3/2023 &ldquo;europenorth&rdquo; produced 175gCO₂eq/kWh. This can be converted to gCO₂eq/kWs by dividing by 3600 (number of seconds in an hour)</p>
           <ol style="list-style-type: circle;">
               <li>Each resource has a known CPU power rating. This might be 135 watts.</li>
               <li>By multiplying together the grams of CO₂(eq) per kWs at that location at a specific by the, power of the CPU by the number of CPU seconds we get an approximation for the grams of CO2 emitted.</li>
           </ol>
-          <div style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>
-              <ul style="margin-bottom:0cm;list-style-type: undefined;">
-                  <li style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>Power consumption breakdown, fossil free percentage and renewable percentage attributes are all retrieved by making a <a href="https://api.electricitymap.org/v3/power-breakdown/past">https://api.electricitymap.org/v3/power-breakdown/past</a> request to Electricity Mapper at the relevant longitude, latitude and time for the resource. The result of this request has the following structure:</li>
+          <div>
+              <ul >
+                  <li>Power consumption breakdown, fossil free percentage and renewable percentage attributes are all retrieved by making a <a href="https://api.electricitymap.org/v3/power-breakdown/past">https://api.electricitymap.org/v3/power-breakdown/past</a> request to Electricity Mapper at the relevant longitude, latitude and time for the resource. The result of this request has the following structure:</li>
               </ul>
           </div>
           <div class="row">
@@ -643,12 +926,12 @@
               <img src="assets/img/Implementation Images/16.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'><br></p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>The fossilFreePercentage and renewablePercentage attributes are taken as is. The powerConsumptionBreakdown attribute is changed so each value is a percentage between 0 and 100 instead of a number of grams of CO2.</p>
-          <p style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
-          <div style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>
-              <ul style="margin-bottom:0cm;list-style-type: undefined;">
-                  <li style='margin:0cm;font-size:16px;font-family:"Calibri",sans-serif;'>This list of ResourceEmissionsInfo object is passed to the get_advice method of the OpenAIClient singleton instance.</li>
+          <p><br></p>
+          <p>The fossilFreePercentage and renewablePercentage attributes are taken as is. The powerConsumptionBreakdown attribute is changed so each value is a percentage between 0 and 100 instead of a number of grams of CO2.</p>
+          <p>&nbsp;</p>
+          <div>
+              <ul >
+                  <li>This list of ResourceEmissionsInfo object is passed to the get_advice method of the OpenAIClient singleton instance.</li>
               </ul>
           </div>
 
@@ -657,16 +940,16 @@
               <img src="assets/img/Algorithm Implementation Images/17.png" class="img-fluid" alt="">
             </div>
             </div>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We first define a class called OpenAIClient, which implements a single instance client that interacts with the OpenAI API.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">It contains an __init__ method that initializes the OpenAI client with the API key in the environment variable.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Then we have the __new__ method: implements the singleton pattern, ensuring that only one instance of OpenAIClient is generated.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Then this is the get_advice method, which is also the method that will be called to get the advice: it will take a list of received resource emission information&nbsp;</span><span style="font-size:14px;font-family:DengXian;">（resource_emission_infos）&nbsp;and an enumerated advice type&nbsp;（advice_type）&nbsp;and then call prompt_gen.get_prompt to generate the prompt. Next, it completes the specified prompt using the OpenAI API and returns the generated advice text.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">I&apos;ll talk more about the format of the get_prompt method generation below.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
+          <p >&nbsp;</span></p>
+          
+          <p >&nbsp;</span></p>
+          <p >We first define a class called OpenAIClient, which implements a single instance client that interacts with the OpenAI API.</p>
+          <p >It contains an __init__ method that initializes the OpenAI client with the API key in the environment variable.</p>
+          <p >Then we have the __new__ method: implements the singleton pattern, ensuring that only one instance of OpenAIClient is generated.</p>
+          <p >Then this is the get_advice method, which is also the method that will be called to get the advice: it will take a list of received resource emission information&nbsp;</span>>（resource_emission_infos）&nbsp;and an enumerated advice type&nbsp;（advice_type）&nbsp;and then call prompt_gen.get_prompt to generate the prompt. Next, it completes the specified prompt using the OpenAI API and returns the generated advice text.</p>
+          <p >&nbsp;</span></p>
+          <p >I&apos;ll talk more about the format of the get_prompt method generation below.</p>
+          
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Algorithm Implementation Images/18.png" class="img-fluid" alt="">
@@ -678,25 +961,22 @@
             </div>
             </div>
 
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-family:&quot;Calibri&quot;,sans-serif;"></span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">We define this get_prompt Python function, which takes two parameters: a list of ResourceEmissionInfo objects and an AdviceType enumeration value. The goal of the function is to generate a prompt string containing detailed server information and a specific advice request, based on the input server information and advice type.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">It will iterate through the input list of resource_emission_infos and construct the server information based on the input advice_type enumeration value. Each advice type is given as</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp; &nbsp; Energy type (AdviceType.ENERGY_TYPE)</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp; &nbsp; Location (AdviceType.LOCATION)</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp; &nbsp; Resource Configuration (AdviceType.RESOURCE_CONFIGURATION)</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp; &nbsp; Cooling type (AdviceType.COOLING_TYPE)</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">For each of the proposed types, the function constructs a prompt string associating with that type. The prompt string contains the server name, the current carbon emission value, and other information related to the advice type, such as power consumption, geographic location, CPU model, etc.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Next, depending on the advice type, the function generates a request advice prompt string&nbsp;</span><span style="font-size:14px;font-family:DengXian;">（request_advice_prompt）.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">&nbsp;</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style="font-size:14px;font-family:DengXian;">Finally, the function joins the strings together and returns the prompt, which is then passed to the OpenAI API.</span><span style="font-size:14px;font-family:DengXian;">&nbsp;</span></p>
-          <p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;margin:0cm;vertical-align:baseline;'><span style='font-size:12px;font-family:"Segoe UI",sans-serif;'>&nbsp;</span></p>
           
-          
-          
+          <p >We define this get_prompt Python function, which takes two parameters: a list of ResourceEmissionInfo objects and an AdviceType enumeration value. The goal of the function is to generate a prompt string containing detailed server information and a specific advice request, based on the input server information and advice type.</p>
+          <p >&nbsp;</p>
+          <p >It will iterate through the input list of resource_emission_infos and construct the server information based on the input advice_type enumeration value. Each advice type is given as</p>
+          <p >&nbsp;</p>
+          <p > Energy type (AdviceType.ENERGY_TYPE)</p>
+          <p > Location (AdviceType.LOCATION)</p>
+          <p > Resource Configuration (AdviceType.RESOURCE_CONFIGURATION)</p>
+          <p > Cooling type (AdviceType.COOLING_TYPE)</p>
+          <p >&nbsp;</p>
+          <p >For each of the proposed types, the function constructs a prompt string associating with that type. The prompt string contains the server name, the current carbon emission value, and other information related to the advice type, such as power consumption, geographic location, CPU model, etc.</p>
+          <p >&nbsp;</p>
+          <p >Next, depending on the advice type, the function generates a request advice prompt string&nbsp;</span>>（request_advice_prompt）.</p>
+          <p >&nbsp;</p>
+          <p >Finally, the function joins the strings together and returns the prompt, which is then passed to the OpenAI API.</p>
+
         </div>
       </div>        
     </div>
