@@ -284,7 +284,9 @@
               requirement of stationary time series, which can then be analyzed and
               predicted using the analysis of stationary time series.
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/Diffenecing.png"/>
+          <br>
+          <img width="1100" height="600" src="assets/img/algorithms/Diffenecing.png"/>
+          <br>
           <p>
               <strong>Autoregressive (AR) Model</strong>
           </p>
@@ -301,10 +303,11 @@
           <p>
               X(t) = c + φ1 * X(t-1) + φ2 * X(t-2) + … + φp * X(t-p) + ε(t)
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/AR.png"/>
-          <p>
-              [3]
-          </p>
+          <p style="float:right">
+            [3]
+        </p>
+          <img width="400" height="150" src="assets/img/algorithms/AR.png"/>
+         
           <p>
               P here indicates a time span interval, e.g., 1 for today and yesterday, 2
               for today and the day before. i indicates how many days of data are related
@@ -338,10 +341,11 @@
           <p>
               Specifically, the MA (q) model can be expressed as the following equation:
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/MA.png"/>
-          <p>
-              [4]
-          </p>
+          <p style="float:right">
+            [4]
+        </p>
+          <img width="800" height="200" src="assets/img/algorithms/MA.png"/>
+          <br>
           <p>
               yt is a data point on the time series. μ is a constant term of the model,
               representing the mean of the series. εt is a random error term,
@@ -365,7 +369,7 @@
               is -1, if it is 0 means there is no correlation between the two, which is a
               measure of the indicator.
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/correlation coefficient.png"/>
+          <img width="1000" height="400" src="assets/img/algorithms/correlation coefficient.png"/>
           <p>
               Autocorrelation Function (ACF) function is a statistic used to describe the
               autocorrelation of a time series, it is not a measure of two different de
@@ -384,13 +388,13 @@
           <p>
               The ACF equation is like this:
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/ACF_equation.png"/>
+          <img width="400" height="200" src="assets/img/algorithms/ACF_equation.png"/>
           <p>
               We will then draw a line graph of the ACF values with a 95% confidence
               interval and choose the q-value for the SARIMA model based on the
               relationship of the points falling into the confidence interval.
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/ACF_Graph.png"/>
+          <img width="800" height="600" src="assets/img/algorithms/ACF_Graph.png"/>
           <p>
               <strong>Partial Autocorrelation Function (PACF)</strong>
           </p>
@@ -410,7 +414,7 @@
           <p>
               The ACF equation is like this:
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/PACF_equation.png"/>
+          <img width="400" height="200" src="assets/img/algorithms/PACF_equation.png"/>
           <p>
               [5]
           </p>
@@ -419,7 +423,7 @@
               interval and choose the p-value for the SARIMA model based on the
               relationship of the points falling into the confidence interval.
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/PACF_graph.png"/>
+          <img width="800" height="600" src="assets/img/algorithms/PACF_graph.png"/>
           <p>
               <strong> </strong>
           </p>
@@ -457,7 +461,7 @@
           <p>
               We can then draw a visual heat map based on the BIC values as follows.
           </p>
-          <img width="800" height="400" src="assets/img/algorithms/BIC.png"/>
+          <img width="800" height="600" src="assets/img/algorithms/BIC.png"/>
           <p>
               <strong>Training and testing sets</strong>
           </p>
@@ -551,7 +555,7 @@
           <p>
               Examples of Residuals Histogram are drawn:
           </p>
-          <img width="800" height="500" src="assets/img/algorithms/Residuals Histogram.png"/>
+          <img width="800" height="600" src="assets/img/algorithms/Residuals Histogram.png"/>
           <p>
               <strong>Quantile-Quantile plot</strong>
           </p>
@@ -575,7 +579,7 @@
           <p>
               Examples of QQ plot are drawn:
           </p>
-          <img width="800" height="500" src="assets/img/algorithms/QQ_plot.png"/>
+          <img width="800" height="600" src="assets/img/algorithms/QQ_plot.png"/>
           <p>
               <strong>Suggestions to improve the performance</strong>
           </p>
