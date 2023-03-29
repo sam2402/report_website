@@ -896,13 +896,17 @@
             </div>
             </div>
           <p>&nbsp;</p>
+         <div style="padding-left: 60px;">
           <ul >
+           
               <li>The attribute resource is the same as what was in the resources dictionary.</li>
-              <li>The past weeks emissions are calculated by finding the emissions for that resource each day for the last week and summing them. The emissions for a particular resource are computed in the following way:<ol style="list-style-type: circle;">
+              <li>The past weeks emissions are calculated by finding the emissions for that resource each day for the last week and summing them. The emissions for a particular resource are computed in the following way:
+                <ol style="list-style-type: circle;">
                       <li>Each resource has a metrics type that we use to approximate the CPU usage. CPU usage is measured in CPU time where the equivalent number of seconds of a CPU working at 100% capacity is approximated. For example, for a web server resource type we use the &lsquo;transactions&rsquo; metric (this the number of API calls in the given time interval). We assume that each transaction has 100% CPU utilisation for 100ms. So, to get the equivalent number of CPU seconds we multiply the number of transactions by 0.1.</li>
                       <li>Then the CO2 per KWh at the location of the resource is computed from an API call to Electricity Map (an external data source). This is returned as a dictionary of times to CO2 per KWh. It has the following structure:</li>
                   </ol>
               </li>
+       
           </ul>
           
           <div class="row">
@@ -910,23 +914,26 @@
               <img src="assets/img/Implementation Images/15.png" class="img-fluid" alt="">
             </div>
             </div>
-
+          <div style="padding: 40px;">
           <p>E.g.. for the first item, at 16:00 on 15/3/2023 &ldquo;europenorth&rdquo; produced 175gCO₂eq/kWh. This can be converted to gCO₂eq/kWs by dividing by 3600 (number of seconds in an hour)</p>
           <ol style="list-style-type: circle;">
               <li>Each resource has a known CPU power rating. This might be 135 watts.</li>
               <li>By multiplying together the grams of CO₂(eq) per kWs at that location at a specific by the, power of the CPU by the number of CPU seconds we get an approximation for the grams of CO2 emitted.</li>
           </ol>
-          <div>
+       
               <ul >
                   <li>Power consumption breakdown, fossil free percentage and renewable percentage attributes are all retrieved by making a <a href="https://api.electricitymap.org/v3/power-breakdown/past">https://api.electricitymap.org/v3/power-breakdown/past</a> request to Electricity Mapper at the relevant longitude, latitude and time for the resource. The result of this request has the following structure:</li>
               </ul>
           </div>
+         </div>
+        </div>
           <div class="row">
             <div style="padding: 30px;">
               <img src="assets/img/Implementation Images/16.png" class="img-fluid" alt="">
             </div>
             </div>
           <p><br></p>
+        </div>
           <p>The fossilFreePercentage and renewablePercentage attributes are taken as is. The powerConsumptionBreakdown attribute is changed so each value is a percentage between 0 and 100 instead of a number of grams of CO2.</p>
           <p>&nbsp;</p>
           <div>
@@ -941,7 +948,7 @@
             </div>
             </div>
           <p >&nbsp;</span></p>
-          
+          <div style="padding: 20px;">
           <p >&nbsp;</span></p>
           <p >We first define a class called OpenAIClient, which implements a single instance client that interacts with the OpenAI API.</p>
           <p >It contains an __init__ method that initializes the OpenAI client with the API key in the environment variable.</p>
@@ -978,7 +985,8 @@
           <p >Finally, the function joins the strings together and returns the prompt, which is then passed to the OpenAI API.</p>
 
         </div>
-      </div>        
+      </div>    
+    </div>    
     </div>
   </section><!-- End Why Us Section -->
 
