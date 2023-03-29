@@ -946,7 +946,7 @@
           <p >We first define a class called OpenAIClient, which implements a single instance client that interacts with the OpenAI API.</p>
           <p >It contains an __init__ method that initializes the OpenAI client with the API key in the environment variable.</p>
           <p >Then we have the __new__ method: implements the singleton pattern, ensuring that only one instance of OpenAIClient is generated.</p>
-          <p >Then this is the get_advice method, which is also the method that will be called to get the advice: it will take a list of received resource emission information&nbsp;</span>>（resource_emission_infos）&nbsp;and an enumerated advice type&nbsp;（advice_type）&nbsp;and then call prompt_gen.get_prompt to generate the prompt. Next, it completes the specified prompt using the OpenAI API and returns the generated advice text.</p>
+          <p >Then this is the get_advice method, which is also the method that will be called to get the advice: it will take a list of received resource emission information&nbsp;</span>（resource_emission_infos）&nbsp;and an enumerated advice type&nbsp;（advice_type）&nbsp;and then call prompt_gen.get_prompt to generate the prompt. Next, it completes the specified prompt using the OpenAI API and returns the generated advice text.</p>
           <p >&nbsp;</span></p>
           <p >I&apos;ll talk more about the format of the get_prompt method generation below.</p>
           

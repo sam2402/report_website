@@ -285,7 +285,7 @@
               predicted using the analysis of stationary time series.
           </p>
           <br>
-          <img width="1100" height="600" src="assets/img/algorithms/Diffenecing.png"/>
+          <img width="1000" height="600" src="assets/img/algorithms/Diffenecing.png"/>
           <br>
           <p>
               <strong>Autoregressive (AR) Model</strong>
@@ -630,7 +630,7 @@
               this class contains the following properties:
           </p>
           <p>
-              resource: An object of type GenericResource, representing a generic
+            <code>resource:</code> An object of type GenericResource, representing a generic
               resource, such as a server.
           </p>
           <p>
@@ -660,15 +660,9 @@
               its power consumption distribution. This information can be used to analyze
               the environmental impact of the resource, as well as to provide
               recommendations for the resource based on different recommendation types.
-              In the <code>get_prompt</code> function, a list containing ResourceEmissionInfo objects
-              is used as input, and then an advice request is generated for those
-              resources.
+              In the <code>get_prompt</code> function, a list containing ResourceEmissionInfo objects and advice_type  is used as input, and then an advice request is generated for those resources.
           </p>
-          <p>
-              and an instance of the AdviceType enumeration type named <code>advice_type</code>. The
-              purpose of this function is to generate a string containing an advice
-              request based on the given resource emission information and advice type.
-          </p>
+         
           <p>
               First, the function defines a string named intro to indicate the beginning
               of the output string. Next, an empty list named <code>server_info_prompts</code> are

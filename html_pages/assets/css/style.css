@@ -64,6 +64,11 @@ table, th, td {
   text-align: center;
 }
 
+.container {
+  margin-left: 150px;
+  width: 130vh
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -777,9 +782,7 @@ section {
 .why-us .container {
   box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
   background: #fff;
-  /* width: 120vh;
-  margin-left: 200px;
-  margin-right: 200px; */
+  
 }
 
 .why-us .icon-box+.icon-box {
